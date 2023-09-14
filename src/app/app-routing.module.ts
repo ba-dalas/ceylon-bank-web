@@ -9,7 +9,7 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path:'',
+    path:'bank-acc-info',
     loadChildren: () => import('./bank-account/bank-account.module').then(m=>m.BankAccountModule)
   },
   {
