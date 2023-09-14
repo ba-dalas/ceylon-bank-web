@@ -1,0 +1,1631 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "Branch",
+            "id": "interface-Branch-9900cb4a3a2e40897679fe3965ce38cbf40eec0a5bee7ed343e87c3f221de42779c34f1111cd7780d6cb6da6c8938fc018e8db8b605a14724a12cff4c78e1d03",
+            "file": "src/app/bank-account/models/branch.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Branch{\r\n  id: string;\r\n  value: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
+            "methods": []
+        },
+        {
+            "name": "User",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "file": "src/stories/User.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-ebc2f7bcd268e8f72f8301f9408b5125208d83837aad2e7e4eba502c459854a7cf938d7afe12b2c658b5582c000c0e58d7211e95043b9dba0ecbdf0aa564f506",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'ceylon-bank-web'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'ceylon-bank-web';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "\n<router-outlet></router-outlet>\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-a53fd738b978780d39fb5fcc9ae4cfe0088e57a1f6ce674862d57dab9192140bd1c05548a9910db0469a431142886e658ff2e761f15781b2ad430e58d64724d0",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 786,
+                            "end": 799,
+                            "flags": 8421376,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 330,
+                            "tagName": {
+                                "pos": 787,
+                                "end": 795,
+                                "flags": 8421376,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 42,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 22,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 34,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 48,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [CommonModule],\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 50
+                    }
+                }
+            }
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-3d494fd89671305c6be07de00e019efdf08f2e36c2169e5fb75a5acdb2841da927e3ef3cbd21cc18f478373a784b1fb90e8b63b9df4b3498a75b652bd9c37b38",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 65,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 74,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 68,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 71,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-header {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "LocalBankAccInfoComponent",
+            "id": "component-LocalBankAccInfoComponent-6bfd9b3026c6b11f44e08b48ee50422604c7f3ecc737e058a9572e597c16d9e8a8e013e25957027abfd74e1f1b0224b9de9ab8c25e495643e48b287d77e7f4f6",
+            "file": "src/app/bank-account/local-bank-acc-info/local-bank-acc-info.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-local-bank-acc-info",
+            "styleUrls": [
+                "./local-bank-acc-info.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./local-bank-acc-info.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "firstFormGroup",
+                    "defaultValue": "this._formBuilder.group({\n    firstCtrl: ['', Validators.required],\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "isLinear",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "secondFormGroup",
+                    "defaultValue": "this._formBuilder.group({\n    secondCtrl: ['', Validators.required],\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { Validators, FormBuilder } from '@angular/forms';\n\n@Component({\n  selector: 'app-local-bank-acc-info',\n  templateUrl: './local-bank-acc-info.component.html',\n  styleUrls: ['./local-bank-acc-info.component.scss']\n})\nexport class LocalBankAccInfoComponent {\n\n  firstFormGroup = this._formBuilder.group({\n    firstCtrl: ['', Validators.required],\n  });\n  secondFormGroup = this._formBuilder.group({\n    secondCtrl: ['', Validators.required],\n  });\n  isLinear = false;\n\n  constructor(private _formBuilder: FormBuilder) {}\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./local-bank-acc-info.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "_formBuilder",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 17,
+                "jsdoctags": [
+                    {
+                        "name": "_formBuilder",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": " <div class=\"text-center py-4\">\n    <h2>Application for Corporate Bank Account Local </h2>\n </div>\n\n <div>\n  <mat-stepper [linear]=\"isLinear\" #stepper>\n    <mat-step [stepControl]=\"firstFormGroup\" label=\"Organization & Account Information\">\n    <div>\n      <app-local-bank-organization-info-shell/>\n    </div>\n\n    </mat-step>\n    <mat-step [stepControl]=\"secondFormGroup\" label=\"Attachment\">\n\n    </mat-step>\n    <mat-step>\n      <ng-template matStepLabel>Signature & Submit</ng-template>\n      <p>You are now done.</p>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button (click)=\"stepper.reset()\">Reset</button>\n      </div>\n    </mat-step>\n  </mat-stepper>\n\n </div>\n"
+        },
+        {
+            "name": "LocalBankAccInfoShellComponent",
+            "id": "component-LocalBankAccInfoShellComponent-b10279414aa43013a4173d65f9bc09ae467e6a4ee46e9a4759e32085774ab7724e6034fea53997ce00552f3f1f028312a01e4be6e704a613301b672ef5a3e071",
+            "file": "src/app/bank-account/local-bank-acc-info-shell/local-bank-acc-info-shell.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-local-bank-acc-info-shell",
+            "styleUrls": [
+                "./local-bank-acc-info-shell.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./local-bank-acc-info-shell.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-local-bank-acc-info-shell',\n  templateUrl: './local-bank-acc-info-shell.component.html',\n  styleUrls: ['./local-bank-acc-info-shell.component.scss']\n})\nexport class LocalBankAccInfoShellComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./local-bank-acc-info-shell.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<app-local-bank-acc-info/>\n"
+        },
+        {
+            "name": "LocalBankOrganizationInfoComponent",
+            "id": "component-LocalBankOrganizationInfoComponent-1f4f68def291732600961354f5204cfbfbd771eb39e99e73ca4f47b5fc1bb433fa0dff336a4b994db4648eb0c0548162938488cd40b7a1ccc3198925d324bcfb",
+            "file": "src/app/bank-account/local-bank-organization-info/local-bank-organization-info.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-local-bank-organization-info",
+            "styleUrls": [
+                "./local-bank-organization-info.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./local-bank-organization-info.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "branchList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "Branch[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "filteredBranchList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "displayBranch",
+                    "args": [
+                        {
+                            "name": "e",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "e",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "initForm",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnChanges",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 32,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnChanges, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup } from '@angular/forms';\nimport { Observable, debounceTime, startWith } from 'rxjs';\nimport { Branch } from '../models/branch.model';\n\n@Component({\n  selector: 'app-local-bank-organization-info',\n  templateUrl: './local-bank-organization-info.component.html',\n  styleUrls: ['./local-bank-organization-info.component.scss']\n})\nexport class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{\n\n  form!: FormGroup;\n  @Input() branchList! :Branch[];\n  filteredBranchList!: Observable<[]>;\n\n\n  constructor(\n    private fb: FormBuilder\n    ) { }\n\n\n  ngOnInit(): void {\n    this.branchList =[\n      { id:'1' , value: 'Dhaka' },\n      { id: '2', value: 'Mymensingh' },\n\n    ]\n    this.initForm();\n  }\n\n  ngOnChanges():void{\n\n\n  }\n\n\n  initForm() {\n    this.form = this.fb.group({\n      bankName: [''],\n      branchId:[''],\n      branchCode:[''],\n      country:[''],\n      district:[''],\n      thana:['']\n    });\n\n  }\n\n  displayBranch(e: any): string {\n    return e ? e.value : '';\n  }\n\n\n\n\n\n  //\n\n  get branchId() {\n    return this.form.get('branchId');\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./local-bank-organization-info.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 15,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit",
+                "OnChanges"
+            ],
+            "accessors": {
+                "branchId": {
+                    "name": "branchId",
+                    "getSignature": {
+                        "name": "branchId",
+                        "type": "",
+                        "returnType": "",
+                        "line": 60
+                    }
+                }
+            },
+            "templateData": "<div [formGroup]=\"form\">\n\n  <div class=\"  \">\n    <h2>General Information</h2>\n\n    <mat-divider></mat-divider>\n\n    <div class=\"grid grid-cols-2 gap-x-12 pt-6\">\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Name of Bank</p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input aria-label=\"Bank Name\" matInput type=\"text\" placeholder=\"Enter Bank Name\" formControlName=\"bankName\">\n        </mat-form-field>\n      </div>\n\n      <div class=\"flex items-center justify-between  \">\n        <p class=\"text-lg font-medium\">Branch Name</p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input type=\"text\" placeholder=\"Please Select\" aria-label=\"Branch Name\" matInput formControlName=\"branchId\"\n            [matAutocomplete]=\"branchAutoComplete\">\n          <mat-autocomplete autoActiveFirstOption #branchAutoComplete=\"matAutocomplete\"\n            [displayWith]=\"displayBranch\">\n            <mat-option *ngFor=\"let element of filteredBranchList | async\" [value]=\"element\">\n              <!-- {{element.value}} -->\n            </mat-option>\n          </mat-autocomplete>\n        </mat-form-field>\n      </div>\n\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Branch Code </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <mat-select formControlName=\"branchCode\" placeholder=\"Please Select\">\n            <mat-option *ngFor=\"let branch of branchList\" [value]=\"branch.id\">\n              {{ branch.value }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Country </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <mat-select formControlName=\"country\" placeholder=\"Please Select\">\n            <mat-option *ngFor=\"let branch of branchList\" [value]=\"branch.id\">\n              {{ branch.value }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Name of District </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <mat-select formControlName=\"district\" placeholder=\"Please Select\">\n            <mat-option *ngFor=\"let branch of branchList\" [value]=\"branch.id\">\n              {{ branch.value }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Thana </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <mat-select formControlName=\"thana\" placeholder=\"Please Select\">\n            <mat-option *ngFor=\"let branch of branchList\" [value]=\"branch.id\">\n              {{ branch.value }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n\n\n\n\n    </div>\n  </div>\n\n</div>\n"
+        },
+        {
+            "name": "LocalBankOrganizationInfoShellComponent",
+            "id": "component-LocalBankOrganizationInfoShellComponent-edf8431518824d752aa4b85b2fa0cef1101e534abcc5fc87d9a6befcf7d1618c42a088e65dc8064148bfd2a957e85d8ab41c9ce1db123a547a0d64dd9fed46e2",
+            "file": "src/app/bank-account/local-bank-organization-info-shell/local-bank-organization-info-shell.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-local-bank-organization-info-shell",
+            "styleUrls": [
+                "./local-bank-organization-info-shell.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./local-bank-organization-info-shell.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-local-bank-organization-info-shell',\n  templateUrl: './local-bank-organization-info-shell.component.html',\n  styleUrls: ['./local-bank-organization-info-shell.component.scss']\n})\nexport class LocalBankOrganizationInfoShellComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./local-bank-organization-info-shell.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<app-local-bank-organization-info />\n"
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-badb6d8cee577661da79ba82ad8f599604afd40fa34e36c7b88d71d77a4fbc7184228cba2f0d73e255d0b7bc51c4c7a8e7b0128b3624aeb0255abab9030fa59a",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 64
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 74,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 70,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-page {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\n.storybook-page h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\n.storybook-page ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.storybook-page .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "PageNotFoundComponent",
+            "id": "component-PageNotFoundComponent-a3563972ce4c053a7987499a48b15969eb69e3c3ac3dd3fe7014bc847dd0c7539eb94a4a20ac6dc99c58e34e0cf9230a9664aff514e4f96bc6359a5ee81bdf03",
+            "file": "src/app/shared/page-not-found/page-not-found.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-page-not-found",
+            "styleUrls": [
+                "./page-not-found.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./page-not-found.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-page-not-found',\n  templateUrl: './page-not-found.component.html',\n  styleUrls: ['./page-not-found.component.scss']\n})\nexport class PageNotFoundComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n.page-not-found-image {\r\n  max-width: 300px;\r\n  border-radius: 4px;\r\n}\r\n\r\n\r\n.not-found {\r\n  padding: 40px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  font-family: \"Roboto\";\r\n}\r\n\r\n\r\n.about button {\r\n  max-width: 100px;\r\n  margin-top: 30px;\r\n}\r\n",
+                    "styleUrl": "./page-not-found.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"not-found\">\n\n  <img class=\"page-not-found-image mat-elevation-z10\"\n       src=\"/assets/images/http-error-404-not-found.png\">\n\n  <h1>Page Not Found</h1>\n  <p>Did you mistype something in the browser address bar?</p>\n\n</div>\n\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-0380eb99dc933726a298e8346c6bccd22e1b5cc04b104327b1338c34576989e47a18332184e6619667ea44cdcc8415094943c57e1610f717c21a145170f5c250",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-55bd22f47a8caa215469db227732aee9030d0b4413c0b2f0c2715f3c7df57b7a9136b045d8dbeb4a683a187bee37640f4171c3ed7c01718fb5d00c7746d6983d",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';\n\nconst routes: Routes = [\n  {\n    path:'',\n    redirectTo:'bank-acc-info/local-acc',\n    pathMatch:'full'\n  },\n  {\n    path:'bank-acc-info',\n    loadChildren: () => \"import('./bank-account/bank-account.module').then(m=>m.BankAccountModule)\"\n  },\n  {\n    path:'**',\n    component:PageNotFoundComponent\n  }\n\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BankAccountModule",
+            "id": "module-BankAccountModule-c2fb5e48d2ee5da06f19ceca4f7fcd64a634b832cb897e9c80e4abaad91206063b889c919e76dd9d408f3a755b9305857d102c6536bf76d0c5dc9e9d4f222949",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/bank-account/bank-account.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { BankAccountRoutingModule } from './bank-account-routing.module';\nimport { LocalBankAccInfoComponent } from './local-bank-acc-info/local-bank-acc-info.component';\nimport { LocalBankAccInfoShellComponent } from './local-bank-acc-info-shell/local-bank-acc-info-shell.component';\nimport { SharedModule } from '../shared/shared.module';\nimport { LocalBankOrganizationInfoComponent } from './local-bank-organization-info/local-bank-organization-info.component';\nimport { LocalBankOrganizationInfoShellComponent } from './local-bank-organization-info-shell/local-bank-organization-info-shell.component';\n\n\n@NgModule({\n  declarations: [\n    LocalBankAccInfoComponent,\n    LocalBankAccInfoShellComponent,\n    LocalBankOrganizationInfoComponent,\n    LocalBankOrganizationInfoShellComponent\n  ],\n  imports: [\n    CommonModule,\n    BankAccountRoutingModule,\n    SharedModule,\n  ]\n})\nexport class BankAccountModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "LocalBankAccInfoComponent"
+                        },
+                        {
+                            "name": "LocalBankAccInfoShellComponent"
+                        },
+                        {
+                            "name": "LocalBankOrganizationInfoComponent"
+                        },
+                        {
+                            "name": "LocalBankOrganizationInfoShellComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "BankAccountRoutingModule"
+                        },
+                        {
+                            "name": "SharedModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BankAccountRoutingModule",
+            "id": "module-BankAccountRoutingModule-cb79a86f80a04223aede4b8bfd2bb7dc5bd0f7dbb1168b06471420c9c76c5e70ea499709bdbcbcfe4d05471c2e745b555030c0f38d9d269d819ac6543db50da9",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/bank-account/bank-account-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { LocalBankAccInfoShellComponent } from './local-bank-acc-info-shell/local-bank-acc-info-shell.component';\n\nconst routes: Routes = [\n  {\n    path:'',\n    redirectTo:'bank-acc-info/local-acc',\n    pathMatch: 'full'\n  },\n  {\n    path:'local-acc',\n    component:LocalBankAccInfoShellComponent\n\n  }\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class BankAccountRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SharedModule",
+            "id": "module-SharedModule-2776385736c4ceabc57a744fefd978c814643a4bc9fe5dec92b8f2cd95a8f2718efa20cbb26cd3aabb284a785a0f4346d010e8e5d3f602143068f435fce738d4",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/shared/shared.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { PageNotFoundComponent } from './page-not-found/page-not-found.component';\nimport { RouterModule } from '@angular/router';\nimport {MatButtonModule} from '@angular/material/button';\nimport {MatFormFieldModule} from '@angular/material/form-field';\nimport {MatStepperModule} from '@angular/material/stepper';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport {MatInputModule} from '@angular/material/input';\nimport {MatSelectModule} from '@angular/material/select';\nimport {MatDividerModule} from '@angular/material/divider';\nimport {MatAutocompleteModule} from '@angular/material/autocomplete';\n\n\n\n@NgModule({\n  declarations: [\n    PageNotFoundComponent\n  ],\n  imports: [\n    CommonModule,\n    RouterModule,\n    MatButtonModule,\n    FormsModule,\n    MatFormFieldModule,\n    MatStepperModule,\n    ReactiveFormsModule,\n    MatInputModule,\n    MatSelectModule,\n    MatDividerModule,\n    MatAutocompleteModule\n\n\n  ],\n  exports:[\n    MatButtonModule,\n    FormsModule,\n    MatFormFieldModule,\n    MatStepperModule,\n    ReactiveFormsModule,\n    MatInputModule,\n    MatSelectModule,\n    MatDividerModule,\n    MatAutocompleteModule\n  ]\n})\nexport class SharedModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "PageNotFoundComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Button>",
+                "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Header>",
+                "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Page>",
+                "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Button>",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Header>",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Page>",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Button>",
+                    "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Header>",
+                    "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Page>",
+                    "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Button>",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Header>",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Page>",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "",
+                        "redirectTo": "bank-acc-info/local-acc",
+                        "pathMatch": "full"
+                    },
+                    {
+                        "path": "bank-acc-info",
+                        "loadChildren": "./bank-account/bank-account.module#BankAccountModule",
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/bank-account/bank-account-routing.module.ts",
+                                        "module": "BankAccountRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": "",
+                                                "redirectTo": "bank-acc-info/local-acc",
+                                                "pathMatch": "full"
+                                            },
+                                            {
+                                                "path": "local-acc",
+                                                "component": "LocalBankAccInfoShellComponent"
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "BankAccountModule"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "**",
+                        "component": "PageNotFoundComponent"
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 3,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/local-bank-acc-info-shell/local-bank-acc-info-shell.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LocalBankAccInfoShellComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/local-bank-acc-info/local-bank-acc-info.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LocalBankAccInfoComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/local-bank-organization-info-shell/local-bank-organization-info-shell.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LocalBankOrganizationInfoShellComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/local-bank-organization-info/local-bank-organization-info.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LocalBankOrganizationInfoComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/models/branch.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Branch",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/page-not-found/page-not-found.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageNotFoundComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            }
+        ]
+    }
+}

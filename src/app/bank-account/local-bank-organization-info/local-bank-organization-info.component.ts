@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Observable, debounceTime, startWith } from 'rxjs';
+import { Observable, debounceTime, map, startWith } from 'rxjs';
 import { Branch } from '../models/branch.model';
 
 @Component({
@@ -12,7 +12,7 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
   form!: FormGroup;
   @Input() branchList! :Branch[];
-  filteredBranchList!: Observable<[]>;
+  filteredBranchList!: Observable<Branch[]>;
 
 
   constructor(
@@ -21,15 +21,24 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
 
   ngOnInit(): void {
-    this.branchList =[
-      { id:'1' , value: 'Dhaka' },
-      { id: '2', value: 'Mymensingh' },
 
-    ]
     this.initForm();
+
   }
 
   ngOnChanges():void{
+
+    this.initForm();
+    // this.branchList =[
+    //   { id:'1' , value: 'Dhaka' },
+    //   { id: '2', value: 'Mymensingh' },
+
+    // ]
+
+    if (this.branchList.length > 0) {
+      this.branchId.addValidators(autocompleteValidator(this.branchList))
+      this.setBranchList()
+    }
 
 
   }
@@ -47,6 +56,17 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
   }
 
+  setBranchList() {
+    if (this.branchId) {
+      this.filteredBranchList = this.branchId.valueChanges.pipe(
+        startWith(''),
+        debounceTime(200),
+        map(value =>
+          this.branchList?.filter((option: Branch) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''
+        ));
+    }
+  }
+
   displayBranch(e: any): string {
     return e ? e.value : '';
   }
@@ -58,7 +78,12 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
   //
 
   get branchId() {
-    return this.form.get('branchId');
+    return this.form.controls['branchId'];
   }
 
+
 }
+function autocompleteValidator(branchList: Branch[]): import("@angular/forms").ValidatorFn | import("@angular/forms").ValidatorFn[] {
+  throw new Error('Function not implemented.');
+}
+
