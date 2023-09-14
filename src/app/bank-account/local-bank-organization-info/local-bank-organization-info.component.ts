@@ -1,5 +1,7 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Observable, debounceTime, startWith } from 'rxjs';
+import { Branch } from '../models/branch.model';
 
 @Component({
   selector: 'app-local-bank-organization-info',
@@ -9,7 +11,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
   form!: FormGroup;
-  @Input() branchList! : any
+  @Input() branchList! :Branch[];
+  filteredBranchList!: Observable<[]>;
 
 
   constructor(
@@ -19,8 +22,8 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
   ngOnInit(): void {
     this.branchList =[
-      { id: 1, name: 'Dhaka' },
-      { id: 2, name: 'Mymensingh' },
+      { id:'1' , value: 'Dhaka' },
+      { id: '2', value: 'Mymensingh' },
 
     ]
     this.initForm();
@@ -28,8 +31,8 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
   ngOnChanges():void{
 
-  }
 
+  }
 
 
   initForm() {
@@ -42,6 +45,20 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
       thana:['']
     });
 
+  }
+
+  displayBranch(e: any): string {
+    return e ? e.value : '';
+  }
+
+
+
+
+
+  //
+
+  get branchId() {
+    return this.form.get('branchId');
   }
 
 }

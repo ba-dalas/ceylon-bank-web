@@ -17,11 +17,14 @@
       <div class="flex items-center justify-between  ">
         <p class="text-lg font-medium">Branch Name</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select formControlName="branchId" placeholder="Please Select">
-            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.name }}
+          <input type="text" placeholder="Please Select" aria-label="Branch Name" matInput formControlName="branchId"
+            [matAutocomplete]="branchAutoComplete">
+          <mat-autocomplete autoActiveFirstOption #branchAutoComplete="matAutocomplete"
+            [displayWith]="displayBranch">
+            <mat-option *ngFor="let element of filteredBranchList | async" [value]="element">
+              <!-- {{element.value}} -->
             </mat-option>
-          </mat-select>
+          </mat-autocomplete>
         </mat-form-field>
       </div>
 
@@ -31,7 +34,7 @@
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <mat-select formControlName="branchCode" placeholder="Please Select">
             <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.name }}
+              {{ branch.value }}
             </mat-option>
           </mat-select>
         </mat-form-field>
@@ -42,7 +45,7 @@
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <mat-select formControlName="country" placeholder="Please Select">
             <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.name }}
+              {{ branch.value }}
             </mat-option>
           </mat-select>
         </mat-form-field>
@@ -54,7 +57,7 @@
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <mat-select formControlName="district" placeholder="Please Select">
             <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.name }}
+              {{ branch.value }}
             </mat-option>
           </mat-select>
         </mat-form-field>
@@ -65,7 +68,7 @@
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <mat-select formControlName="thana" placeholder="Please Select">
             <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.name }}
+              {{ branch.value }}
             </mat-option>
           </mat-select>
         </mat-form-field>

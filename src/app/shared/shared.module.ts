@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 
@@ -26,7 +27,8 @@ import {MatDividerModule} from '@angular/material/divider';
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    MatAutocompleteModule
 
 
   ],
@@ -38,7 +40,8 @@ import {MatDividerModule} from '@angular/material/divider';
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    MatAutocompleteModule
   ]
 })
 export class SharedModule { }
