@@ -1,0 +1,80 @@
+<div [formGroup]="form">
+
+  <div class="  ">
+    <h2>General Information</h2>
+
+    <mat-divider></mat-divider>
+
+    <div class="grid grid-cols-2 gap-x-12 pt-6">
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Name of Bank</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="Bank Name" matInput type="text" placeholder="Enter Bank Name" formControlName="bankName">
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between  ">
+        <p class="text-lg font-medium">Branch Name</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <mat-select formControlName="branchId" placeholder="Please Select">
+            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
+              {{ branch.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Branch Code </p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <mat-select formControlName="branchCode" placeholder="Please Select">
+            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
+              {{ branch.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Country </p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <mat-select formControlName="country" placeholder="Please Select">
+            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
+              {{ branch.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Name of District </p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <mat-select formControlName="district" placeholder="Please Select">
+            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
+              {{ branch.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Thana </p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <mat-select formControlName="thana" placeholder="Please Select">
+            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
+              {{ branch.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+</div>

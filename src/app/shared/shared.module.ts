@@ -5,6 +5,10 @@ import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -16,15 +20,25 @@ import {MatStepperModule} from '@angular/material/stepper';
     CommonModule,
     RouterModule,
     MatButtonModule,
+    FormsModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDividerModule
 
 
   ],
   exports:[
     MatButtonModule,
+    FormsModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDividerModule
   ]
 })
 export class SharedModule { }
