@@ -22,60 +22,57 @@
           <mat-autocomplete autoActiveFirstOption #branchAutoComplete="matAutocomplete"
             [displayWith]="displayBranch">
             <mat-option *ngFor="let element of filteredBranchList | async" [value]="element">
-              <!-- {{element.value}} -->
+              {{element.value}}
             </mat-option>
           </mat-autocomplete>
         </mat-form-field>
       </div>
 
 
-      <div class="flex items-center justify-between ">
+      <!-- <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Branch Code </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select formControlName="branchCode" placeholder="Please Select">
+          <mat-select aria-label="Branch Code" formControlName="branchCode" placeholder="Please Select">
             <mat-option *ngFor="let branch of branchList" [value]="branch.id">
               {{ branch.value }}
             </mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
+      </div> -->
 
-      <div class="flex items-center justify-between ">
+      <!-- <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Country </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select formControlName="country" placeholder="Please Select">
+          <mat-select aria-label="Country" formControlName="country" placeholder="Please Select">
             <mat-option *ngFor="let branch of branchList" [value]="branch.id">
               {{ branch.value }}
             </mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
+      </div> -->
 
 
-      <div class="flex items-center justify-between ">
+      <!-- <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Name of District </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select formControlName="district" placeholder="Please Select">
+          <mat-select aria-label="Name of District" formControlName="district" placeholder="Please Select">
             <mat-option *ngFor="let branch of branchList" [value]="branch.id">
               {{ branch.value }}
             </mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
+      </div> -->
 
-      <div class="flex items-center justify-between ">
+      <!-- <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Thana </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select formControlName="thana" placeholder="Please Select">
+          <mat-select aria-label="Thana" formControlName="thana" placeholder="Please Select">
             <mat-option *ngFor="let branch of branchList" [value]="branch.id">
               {{ branch.value }}
             </mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
-
-
-
+      </div> -->
 
     </div>
   </div>

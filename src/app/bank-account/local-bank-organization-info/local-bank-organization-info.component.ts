@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable, debounceTime, map, startWith } from 'rxjs';
 import { Branch } from '../models/branch.model';
+import { autocompleteValidator } from '../validators/autocomplete.validator';
 
 @Component({
   selector: 'app-local-bank-organization-info',
@@ -23,17 +24,19 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
   ngOnInit(): void {
 
     this.initForm();
-
-  }
-
-  ngOnChanges():void{
-
-    this.initForm();
     // this.branchList =[
     //   { id:'1' , value: 'Dhaka' },
     //   { id: '2', value: 'Mymensingh' },
 
     // ]
+
+  }
+
+  ngOnChanges():void{
+
+
+    this.initForm();
+
 
     if (this.branchList.length > 0) {
       this.branchId.addValidators(autocompleteValidator(this.branchList))
@@ -48,10 +51,10 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
     this.form = this.fb.group({
       bankName: [''],
       branchId:[''],
-      branchCode:[''],
-      country:[''],
-      district:[''],
-      thana:['']
+      // branchCode:[''],
+      // country:[''],
+      // district:[''],
+      // thana:['']
     });
 
   }
@@ -77,13 +80,27 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
   //
 
+  get bankName() {
+    return this.form.controls['bankName'];
+  }
   get branchId() {
     return this.form.controls['branchId'];
   }
+  // get branchCode() {
+  //   return this.form.controls['branchCode'];
+  // }
+  // get country() {
+  //   return this.form.controls['country'];
+  // }
+  // get district() {
+  //   return this.form.controls['district'];
+  // }
+
+  // get thana() {
+  //   return this.form.controls['thana'];
+  // }
 
 
 }
-function autocompleteValidator(branchList: Branch[]): import("@angular/forms").ValidatorFn | import("@angular/forms").ValidatorFn[] {
-  throw new Error('Function not implemented.');
-}
+
 

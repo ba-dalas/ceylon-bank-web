@@ -5,12 +5,17 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'bank-acc-info/local-acc',
+    // redirectTo:'bank-acc-info/local-acc',
+    redirectTo:'users',
     pathMatch:'full'
   },
   {
     path:'bank-acc-info',
     loadChildren: () => import('./bank-account/bank-account.module').then(m=>m.BankAccountModule)
+  },
+  {
+    path:'users',
+    loadChildren: () => import('./user/user.module').then(m=>m.UserModule)
   },
   {
     path:'**',
