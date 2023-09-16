@@ -15,8 +15,7 @@ export class UserEditComponent implements OnInit , OnChanges{
 
   form!: FormGroup;
 
-  @Input()
-  userTypes!: UserType[];
+  @Input() userTypes!: UserType[];
 
 
   filteredUserTypeList!: Observable<UserType[]>;
@@ -43,19 +42,6 @@ export class UserEditComponent implements OnInit , OnChanges{
     }
   }
 
-
-  initForm() {
-    this.form = this.fb.group({
-      fullName: [''],
-      emailAddress: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
-      contactNo: [''],
-      gender: [''],
-      designation: [''],
-      userType: [''],
-    });
-
-  }
-
   setUserTypeList() {
     if (this.userType) {
       this.filteredUserTypeList = this.userType.valueChanges.pipe(
@@ -66,6 +52,25 @@ export class UserEditComponent implements OnInit , OnChanges{
         ));
     }
   }
+
+
+
+  initForm() {
+    this.form = this.fb.group({
+      fullName: [''],
+      emailAddress: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+      contactNo: [''],
+      gender: [''],
+      designation: [''],
+      userType: [''],
+      division: [''],
+      branch: [''],
+      status: [''],
+
+    });
+
+  }
+
 
 
 
@@ -100,6 +105,17 @@ export class UserEditComponent implements OnInit , OnChanges{
     return this.form.controls['userType'];
   }
 
+  get division() {
+    return this.form.controls['division'];
+  }
+
+  get branch() {
+    return this.form.controls['branch'];
+  }
+
+  get status() {
+    return this.form.controls['status'];
+  }
 
 
 }
