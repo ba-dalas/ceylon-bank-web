@@ -1,9 +1,10 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserType } from '../models/user-type.model';
 import { Observable, debounceTime, map, startWith } from 'rxjs';
 import { CustomValidatorService } from 'src/app/core/services/custom-validator.service';
-import { autocompleteValidator } from 'src/app/bank-account/validators/autocomplete.validator';
+import { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';
+
 
 @Component({
   selector: 'app-user-edit',
@@ -32,7 +33,7 @@ export class UserEditComponent implements OnInit , OnChanges{
 
   }
 
-  ngOnChanges():void{
+  ngOnChanges(changes: SimpleChanges): void {
 
     this.initForm();
 
@@ -54,7 +55,6 @@ export class UserEditComponent implements OnInit , OnChanges{
     });
 
   }
-
 
   setUserTypeList() {
     if (this.userType) {

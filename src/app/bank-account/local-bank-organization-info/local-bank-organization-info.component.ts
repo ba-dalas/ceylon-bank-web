@@ -2,7 +2,8 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable, debounceTime, map, startWith } from 'rxjs';
 import { Branch } from '../models/branch.model';
-import { autocompleteValidator } from '../validators/autocomplete.validator';
+import { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';
+
 
 @Component({
   selector: 'app-local-bank-organization-info',

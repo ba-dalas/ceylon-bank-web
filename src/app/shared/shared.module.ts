@@ -28,7 +28,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatInputModule,
     MatSelectModule,
     MatDividerModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
 
 
   ],

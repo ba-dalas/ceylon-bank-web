@@ -1,4 +1,5 @@
-import { DdlType } from "./ddl-type.model";
+import { DdlType } from "src/app/core/models/ddl-type.model";
+
 
 export interface UserType extends DdlType {
   id: string;

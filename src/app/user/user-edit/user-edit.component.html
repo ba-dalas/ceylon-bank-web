@@ -8,7 +8,8 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Full Name</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <input aria-label="Full Name" matInput type="text" placeholder="Enter Full Name" formControlName="fullName"  class="text-base">
+          <input aria-label="Full Name" matInput type="text" placeholder="Enter Full Name" formControlName="fullName"
+            class="text-base">
 
         </mat-form-field>
       </div>
@@ -16,23 +17,25 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Email Address</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <input aria-label="Email Address" type="email" matInput placeholder="Email Address" formControlName="emailAddress" class="text-base">
+          <input aria-label="Email Address" type="email" matInput placeholder="Email Address"
+            formControlName="emailAddress" class="text-base">
         </mat-form-field>
       </div>
 
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Phone Number</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <input aria-label="Phone Number" minlength="11" maxlength="11" type="text" matInput placeholder="+880" formControlName="contactNo" class="text-base">
+          <input aria-label="Phone Number" minlength="11" maxlength="11" type="text" matInput placeholder="+880"
+            formControlName="contactNo" class="text-base">
         </mat-form-field>
       </div>
 
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Gender</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select aria-label="Gender" formControlName="gender" placeholder="Please Select"  >
+          <mat-select aria-label="Gender" formControlName="gender" placeholder="Please Select">
             <mat-option value="female">Female</mat-option>
-            <mat-option  value="male">Male</mat-option>
+            <mat-option value="male">Male</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -40,7 +43,8 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Designation</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <input aria-label="Designation" matInput type="text" placeholder="Enter Designation" formControlName="designation"  class="text-base">
+          <input aria-label="Designation" matInput type="text" placeholder="Enter Designation"
+            formControlName="designation" class="text-base">
         </mat-form-field>
       </div>
 
@@ -48,7 +52,7 @@
         <p class="text-lg font-medium">User Type</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <input type="text" placeholder="Pick one" aria-label="User Type" matInput formControlName="userType"
-          [matAutocomplete]="userTypeAutoComplete">
+            [matAutocomplete]="userTypeAutoComplete">
           <mat-autocomplete autoActiveFirstOption #userTypeAutoComplete="matAutocomplete"
             [displayWith]="displayAutocompleteValue">
             <mat-option *ngFor="let element of filteredUserTypeList | async" [value]="element">

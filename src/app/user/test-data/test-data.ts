@@ -1,18 +1,18 @@
 import { UserType } from "../models/user-type.model";
 
 export const userTypes: UserType[] =
-[
-  {
-      "id": "cost_center",
-      "value": "Cost Center"
-  },
-  {
-      "id": "vendor_payment",
-      "value": "Vendor Payment"
-  },
-  {
-      "id": "cash_advance",
-      "value": "Cash Advance"
-    }
-]
-;
+  [
+    {
+      "id": "1",
+      "value": "Admin"
+    },
+    {
+      "id": "2",
+      "value": "User"
+    },
+    {
+      "id": "3",
+      "value": "Viewer"
+    }
+  ]
+  ;
