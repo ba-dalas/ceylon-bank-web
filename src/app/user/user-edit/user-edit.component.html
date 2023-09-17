@@ -97,6 +97,13 @@
             </mat-option>
           </mat-autocomplete>
 
+          <mat-error *ngIf="division.errors?.['required']">
+            Division is mandatory.
+          </mat-error>
+          <mat-error *ngIf="division.errors?.['invalidValue']">
+            Please select valid value.
+          </mat-error>
+
         </mat-form-field>
       </div>
 
@@ -111,6 +118,12 @@
             {{element.value}}
           </mat-option>
         </mat-autocomplete>
+        <mat-error *ngIf="branch.errors?.['required']">
+          Branch is mandatory.
+        </mat-error>
+        <mat-error *ngIf="branch.errors?.['invalidValue']">
+          Please select valid value.
+        </mat-error>
         </mat-form-field>
       </div>
 
