@@ -34,6 +34,70 @@
             "methods": []
         },
         {
+            "name": "BranchCode",
+            "id": "interface-BranchCode-9103e6ee966410d9ea2344cb57c5f7b567ebb678779624e568623b5142a7acc48eca808c54aefdfb047644cdf0fa323150cbdd363be00a8e41991c45f990f74e",
+            "file": "src/app/bank-account/models/branch-code.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface BranchCode{\r\n  code: string;\r\n  value: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "code",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
+            "methods": []
+        },
+        {
+            "name": "Country",
+            "id": "interface-Country-88deb88f7650e703510b1464ce7244fc705190a456aaa6374581994a32710ad66206e23406db97269df4d88d9ef6ebea6b627624f38bff879ece0da9766f8f51",
+            "file": "src/app/bank-account/models/country.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Country{\r\n  id: string;\r\n  value: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
+            "methods": []
+        },
+        {
             "name": "DdlType",
             "id": "interface-DdlType-55f81ee083e98f7bc6344726bb561eea579ae9010e065c6ec598eae1e0eb93ed5c7ee3e4d8249dea9cdae2cf739ecabdd3a01efc4065ac89060de9b303a2d6a4",
             "file": "src/app/core/models/ddl-type.model.ts",
@@ -43,6 +107,70 @@
             "sourceCode": "export interface DdlType {}\r\n",
             "properties": [],
             "indexSignatures": [],
+            "methods": []
+        },
+        {
+            "name": "District",
+            "id": "interface-District-afbec6991b50e1d44ad7c4561632a5432f888f2f7ddcd8b0676beb42e87460cd318af38ee75584c215076b97ced436ea21e8b641a4b3dc9c6f3863a0338515a2",
+            "file": "src/app/bank-account/models/district.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface District{\r\n  id: string;\r\n  value: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
+            "methods": []
+        },
+        {
+            "name": "Thana",
+            "id": "interface-Thana-081c0e64309558f176cbeb2142282d0670d2bac6d942b99afd8f14a60ae4238cb42534b4058a5914f58b1a4d7760b6e27af0321455c4f1ad5dda781f937752df",
+            "file": "src/app/bank-account/models/thana.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Thana{\r\n  id: string;\r\n  value: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 168,
             "methods": []
         },
         {
@@ -330,7 +458,7 @@
         },
         {
             "name": "LocalBankOrganizationInfoComponent",
-            "id": "component-LocalBankOrganizationInfoComponent-0296acdfc252d12458e9c0217274598c12b4624e4a18c2f4c7a02b21fc95622b1cfefc7954392480c947ab3508db7c28b4ba81faa26da1620845599fc1168670",
+            "id": "component-LocalBankOrganizationInfoComponent-e45f8c53362e07e3736b06f54f0d66c4419e2050f23f1ff084a09357ad10a786c76ff5e589c2ca98fe7fa54a1eed02c3918a95a3baa37cdd3b91c703922b3b57",
             "file": "src/app/bank-account/local-bank-organization-info/local-bank-organization-info.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -349,16 +477,57 @@
             "hostDirectives": [],
             "inputsClass": [
                 {
+                    "name": "branchCodeList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "BranchCode[]",
+                    "decorators": []
+                },
+                {
                     "name": "branchList",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 20,
                     "type": "Branch[]",
+                    "decorators": []
+                },
+                {
+                    "name": "countryList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "Country[]",
+                    "decorators": []
+                },
+                {
+                    "name": "districtList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "District[]",
+                    "decorators": []
+                },
+                {
+                    "name": "thanaList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "Thana[]",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
             "propertiesClass": [
+                {
+                    "name": "filteredBranchCodeList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<BranchCode[]>",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
                 {
                     "name": "filteredBranchList",
                     "deprecated": false,
@@ -366,7 +535,34 @@
                     "type": "Observable<Branch[]>",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 26
+                },
+                {
+                    "name": "filteredCountryList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<Country[]>",
+                    "optional": false,
+                    "description": "",
+                    "line": 28
+                },
+                {
+                    "name": "filteredDistrictList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<District[]>",
+                    "optional": false,
+                    "description": "",
+                    "line": 29
+                },
+                {
+                    "name": "filteredThanaList",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<Thana[]>",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
                 },
                 {
                     "name": "form",
@@ -375,12 +571,12 @@
                     "type": "FormGroup",
                     "optional": false,
                     "description": "",
-                    "line": 15
+                    "line": 19
                 }
             ],
             "methodsClass": [
                 {
-                    "name": "displayBranch",
+                    "name": "displayAutocompleteValue",
                     "args": [
                         {
                             "name": "e",
@@ -392,7 +588,7 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 74,
+                    "line": 147,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -413,7 +609,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 51,
+                    "line": 80,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -423,7 +619,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 36,
+                    "line": 46,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -433,7 +629,17 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 25,
+                    "line": 40,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setBranchCodeList",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 103,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -443,7 +649,37 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 63,
+                    "line": 92,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setCountryList",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 114,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setDistrictList",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 125,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setThanaList",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 136,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -457,7 +693,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnChanges, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup } from '@angular/forms';\nimport { Observable, debounceTime, map, startWith } from 'rxjs';\nimport { Branch } from '../models/branch.model';\nimport { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';\n\n\n@Component({\n  selector: 'app-local-bank-organization-info',\n  templateUrl: './local-bank-organization-info.component.html',\n  styleUrls: ['./local-bank-organization-info.component.scss']\n})\nexport class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{\n\n  form!: FormGroup;\n  @Input() branchList! :Branch[];\n  filteredBranchList!: Observable<Branch[]>;\n\n\n  constructor(\n    private fb: FormBuilder\n    ) { }\n\n\n  ngOnInit(): void {\n\n    this.initForm();\n    // this.branchList =[\n    //   { id:'1' , value: 'Dhaka' },\n    //   { id: '2', value: 'Mymensingh' },\n\n    // ]\n\n  }\n\n  ngOnChanges():void{\n\n\n    this.initForm();\n\n\n    if (this.branchList.length > 0) {\n      this.branchId.addValidators(autocompleteValidator(this.branchList))\n      this.setBranchList()\n    }\n\n\n  }\n\n\n  initForm() {\n    this.form = this.fb.group({\n      bankName: [''],\n      branchId:[''],\n      // branchCode:[''],\n      // country:[''],\n      // district:[''],\n      // thana:['']\n    });\n\n  }\n\n  setBranchList() {\n    if (this.branchId) {\n      this.filteredBranchList = this.branchId.valueChanges.pipe(\n        startWith(''),\n        debounceTime(200),\n        map(value =>\n          this.branchList?.filter((option: Branch) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''\n        ));\n    }\n  }\n\n  displayBranch(e: any): string {\n    return e ? e.value : '';\n  }\n\n\n\n\n\n  //\n\n  get bankName() {\n    return this.form.controls['bankName'];\n  }\n  get branchId() {\n    return this.form.controls['branchId'];\n  }\n  // get branchCode() {\n  //   return this.form.controls['branchCode'];\n  // }\n  // get country() {\n  //   return this.form.controls['country'];\n  // }\n  // get district() {\n  //   return this.form.controls['district'];\n  // }\n\n  // get thana() {\n  //   return this.form.controls['thana'];\n  // }\n\n\n}\n\n\n",
+            "sourceCode": "import { Component, Input, OnChanges, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup } from '@angular/forms';\nimport { Observable, debounceTime, map, startWith } from 'rxjs';\nimport { Branch } from '../models/branch.model';\nimport { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';\nimport { BranchCode } from '../models/branch-code.model';\nimport { Country } from '../models/country.model';\nimport { District } from '../models/district.model';\nimport { Thana } from '../models/thana.model';\n\n\n@Component({\n  selector: 'app-local-bank-organization-info',\n  templateUrl: './local-bank-organization-info.component.html',\n  styleUrls: ['./local-bank-organization-info.component.scss']\n})\nexport class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{\n\n  form!: FormGroup;\n  @Input() branchList! :Branch[];\n  @Input() branchCodeList! :BranchCode[];\n  @Input() countryList! :Country[];\n  @Input() districtList! :District[];\n  @Input() thanaList! :Thana[];\n\n  filteredBranchList!: Observable<Branch[]>;\n  filteredBranchCodeList!: Observable<BranchCode[]>;\n  filteredCountryList!: Observable<Country[]>;\n  filteredDistrictList!: Observable<District[]>;\n  filteredThanaList!: Observable<Thana[]>;\n\n\n\n\n  constructor(\n    private fb: FormBuilder\n    ) { }\n\n\n  ngOnInit(): void {\n\n    // this.initForm();\n\n  }\n\n  ngOnChanges():void{\n\n\n    this.initForm();\n\n    if (this.branchList?.length > 0) {\n      this.branchId.addValidators(autocompleteValidator(this.branchList))\n      this.setBranchList()\n    }\n\n    if (this.branchCodeList?.length > 0) {\n      this.branchCode.addValidators(autocompleteValidator(this.branchCodeList))\n      this.setBranchCodeList()\n    }\n\n    if (this.countryList?.length > 0) {\n      this.country.addValidators(autocompleteValidator(this.countryList))\n      this.setCountryList()\n    }\n\n    if (this.districtList?.length > 0) {\n      this.district.addValidators(autocompleteValidator(this.districtList))\n      this.setDistrictList()\n    }\n\n    if (this.thanaList?.length > 0) {\n      this.thana.addValidators(autocompleteValidator(this.thanaList))\n      this.setThanaList()\n    }\n\n\n  }\n\n\n  initForm() {\n    this.form = this.fb.group({\n      bankName: [''],\n      branchId:[''],\n      branchCode:[''],\n      country:[''],\n      district:[''],\n      thana:['']\n    });\n\n  }\n\n  setBranchList() {\n    if (this.branchId) {\n      this.filteredBranchList = this.branchId.valueChanges.pipe(\n        startWith(''),\n        debounceTime(200),\n        map(value =>\n          this.branchList?.filter((option: Branch) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''\n        ));\n    }\n  }\n\n  setBranchCodeList() {\n    if (this.branchCode) {\n      this.filteredBranchCodeList = this.branchCode.valueChanges.pipe(\n        startWith(''),\n        debounceTime(200),\n        map(value =>\n          this.branchCodeList?.filter((option: BranchCode) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''\n        ));\n    }\n  }\n\n  setCountryList() {\n    if (this.country) {\n      this.filteredCountryList = this.country.valueChanges.pipe(\n        startWith(''),\n        debounceTime(200),\n        map(value =>\n          this.countryList?.filter((option: Country) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''\n        ));\n    }\n  }\n\n  setDistrictList() {\n    if (this.district) {\n      this.filteredDistrictList = this.district.valueChanges.pipe(\n        startWith(''),\n        debounceTime(200),\n        map(value =>\n          this.districtList?.filter((option: District) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''\n        ));\n    }\n  }\n\n  setThanaList() {\n    if (this.thana) {\n      this.filteredThanaList = this.thana.valueChanges.pipe(\n        startWith(''),\n        debounceTime(200),\n        map(value =>\n          this.thanaList?.filter((option: Thana) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''\n        ));\n    }\n  }\n\n  displayAutocompleteValue(e: any): string {\n    return e ? e.value : '';\n  }\n\n\n\n\n\n  //\n\n  get bankName() {\n    return this.form.controls['bankName'];\n  }\n  get branchId() {\n    return this.form.controls['branchId'];\n  }\n  get branchCode() {\n    return this.form.controls['branchCode'];\n  }\n  get country() {\n    return this.form.controls['country'];\n  }\n  get district() {\n    return this.form.controls['district'];\n  }\n\n  get thana() {\n    return this.form.controls['thana'];\n  }\n\n\n}\n\n\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -479,7 +715,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 17,
+                "line": 30,
                 "jsdoctags": [
                     {
                         "name": "fb",
@@ -503,7 +739,7 @@
                         "name": "bankName",
                         "type": "",
                         "returnType": "",
-                        "line": 84
+                        "line": 157
                     }
                 },
                 "branchId": {
@@ -512,15 +748,51 @@
                         "name": "branchId",
                         "type": "",
                         "returnType": "",
-                        "line": 87
+                        "line": 160
+                    }
+                },
+                "branchCode": {
+                    "name": "branchCode",
+                    "getSignature": {
+                        "name": "branchCode",
+                        "type": "",
+                        "returnType": "",
+                        "line": 163
+                    }
+                },
+                "country": {
+                    "name": "country",
+                    "getSignature": {
+                        "name": "country",
+                        "type": "",
+                        "returnType": "",
+                        "line": 166
+                    }
+                },
+                "district": {
+                    "name": "district",
+                    "getSignature": {
+                        "name": "district",
+                        "type": "",
+                        "returnType": "",
+                        "line": 169
+                    }
+                },
+                "thana": {
+                    "name": "thana",
+                    "getSignature": {
+                        "name": "thana",
+                        "type": "",
+                        "returnType": "",
+                        "line": 173
                     }
                 }
             },
-            "templateData": "<div [formGroup]=\"form\">\n\n  <div class=\"  \">\n    <h2>General Information</h2>\n\n    <mat-divider></mat-divider>\n\n    <div class=\"grid grid-cols-2 gap-x-12 pt-6\">\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Name of Bank</p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input aria-label=\"Bank Name\" matInput type=\"text\" placeholder=\"Enter Bank Name\" formControlName=\"bankName\">\n        </mat-form-field>\n      </div>\n\n      <div class=\"flex items-center justify-between  \">\n        <p class=\"text-lg font-medium\">Branch Name</p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input type=\"text\" placeholder=\"Please Select\" aria-label=\"Branch Name\" matInput formControlName=\"branchId\"\n            [matAutocomplete]=\"branchAutoComplete\">\n          <mat-autocomplete autoActiveFirstOption #branchAutoComplete=\"matAutocomplete\"\n            [displayWith]=\"displayBranch\">\n            <mat-option *ngFor=\"let element of filteredBranchList | async\" [value]=\"element\">\n              {{element.value}}\n            </mat-option>\n          </mat-autocomplete>\n        </mat-form-field>\n      </div>\n\n\n      <!-- <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Branch Code </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <mat-select aria-label=\"Branch Code\" formControlName=\"branchCode\" placeholder=\"Please Select\">\n            <mat-option *ngFor=\"let branch of branchList\" [value]=\"branch.id\">\n              {{ branch.value }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div> -->\n\n      <!-- <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Country </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <mat-select aria-label=\"Country\" formControlName=\"country\" placeholder=\"Please Select\">\n            <mat-option *ngFor=\"let branch of branchList\" [value]=\"branch.id\">\n              {{ branch.value }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div> -->\n\n\n      <!-- <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Name of District </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <mat-select aria-label=\"Name of District\" formControlName=\"district\" placeholder=\"Please Select\">\n            <mat-option *ngFor=\"let branch of branchList\" [value]=\"branch.id\">\n              {{ branch.value }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div> -->\n\n      <!-- <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Thana </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <mat-select aria-label=\"Thana\" formControlName=\"thana\" placeholder=\"Please Select\">\n            <mat-option *ngFor=\"let branch of branchList\" [value]=\"branch.id\">\n              {{ branch.value }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div> -->\n\n    </div>\n  </div>\n\n</div>\n"
+            "templateData": "<div [formGroup]=\"form\" *ngIf=\"form\">\n\n  <div class=\"  \">\n    <h2>General Information</h2>\n\n    <mat-divider></mat-divider>\n\n    <div class=\"grid grid-cols-2 gap-x-12 pt-6\">\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Name of Bank</p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input aria-label=\"Bank Name\" matInput type=\"text\" placeholder=\"Enter Bank Name\" formControlName=\"bankName\">\n        </mat-form-field>\n      </div>\n\n      <div class=\"flex items-center justify-between  \">\n        <p class=\"text-lg font-medium\">Branch Name</p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input type=\"text\" placeholder=\"Please Select\" aria-label=\"Branch Name\" matInput formControlName=\"branchId\"\n            [matAutocomplete]=\"branchAutoComplete\">\n          <mat-autocomplete autoActiveFirstOption #branchAutoComplete=\"matAutocomplete\"\n            [displayWith]=\"displayAutocompleteValue\">\n            <mat-option *ngFor=\"let element of filteredBranchList | async\" [value]=\"element\">\n              {{element.value}}\n            </mat-option>\n          </mat-autocomplete>\n        </mat-form-field>\n      </div>\n\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Branch Code </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n            <input type=\"text\" placeholder=\"Please Select\" aria-label=\"Branch Code\" matInput formControlName=\"branchCode\"\n            [matAutocomplete]=\"branchCodeAutoComplete\">\n            <mat-autocomplete autoActiveFirstOption #branchCodeAutoComplete=\"matAutocomplete\"\n            [displayWith]=\"displayAutocompleteValue\">\n            <mat-option *ngFor=\"let element of filteredBranchCodeList | async\" [value]=\"element\">\n              {{element.value}}\n            </mat-option>\n          </mat-autocomplete>\n        </mat-form-field>\n      </div>\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Country </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input type=\"text\" placeholder=\"Please Select\" aria-label=\"Country\" matInput formControlName=\"country\"\n            [matAutocomplete]=\"countryAutoComplete\">\n            <mat-autocomplete autoActiveFirstOption #countryAutoComplete=\"matAutocomplete\"\n            [displayWith]=\"displayAutocompleteValue\">\n            <mat-option *ngFor=\"let element of filteredCountryList | async\" [value]=\"element\">\n              {{element.value}}\n            </mat-option>\n          </mat-autocomplete>\n\n        </mat-form-field>\n      </div>\n\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Name of District </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input type=\"text\" placeholder=\"Please Select\" aria-label=\"Name of District\" matInput formControlName=\"district\"\n            [matAutocomplete]=\"districtAutoComplete\">\n            <mat-autocomplete autoActiveFirstOption #districtAutoComplete=\"matAutocomplete\"\n            [displayWith]=\"displayAutocompleteValue\">\n            <mat-option *ngFor=\"let element of filteredDistrictList | async\" [value]=\"element\">\n              {{element.value}}\n            </mat-option>\n          </mat-autocomplete>\n\n        </mat-form-field>\n      </div>\n\n      <div class=\"flex items-center justify-between \">\n        <p class=\"text-lg font-medium\">Thana </p>\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\n          <input type=\"text\" placeholder=\"Please Select\" aria-label=\"Thana\" matInput formControlName=\"thana\"\n            [matAutocomplete]=\"districtAutoComplete\">\n            <mat-autocomplete autoActiveFirstOption #districtAutoComplete=\"matAutocomplete\"\n            [displayWith]=\"displayAutocompleteValue\">\n            <mat-option *ngFor=\"let element of filteredThanaList | async\" [value]=\"element\">\n              {{element.value}}\n            </mat-option>\n          </mat-autocomplete>\n\n\n        </mat-form-field>\n      </div>\n\n    </div>\n  </div>\n\n</div>\n"
         },
         {
             "name": "LocalBankOrganizationInfoShellComponent",
-            "id": "component-LocalBankOrganizationInfoShellComponent-edf8431518824d752aa4b85b2fa0cef1101e534abcc5fc87d9a6befcf7d1618c42a088e65dc8064148bfd2a957e85d8ab41c9ce1db123a547a0d64dd9fed46e2",
+            "id": "component-LocalBankOrganizationInfoShellComponent-338f2e424d73f0681e7843d33158fbe36f1da9164b03fcf2e67c047dce3ceed18a63cfa4fa7878cc2a4a9cb231731e3b96d8a2ce70131735b94863d113949c90",
             "file": "src/app/bank-account/local-bank-organization-info-shell/local-bank-organization-info-shell.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -539,7 +811,28 @@
             "hostDirectives": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "branchCodeList",
+                    "defaultValue": "signal<BranchCode[]>([])",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "branchList",
+                    "defaultValue": "signal<Branch[]>([])",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -550,7 +843,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-local-bank-organization-info-shell',\n  templateUrl: './local-bank-organization-info-shell.component.html',\n  styleUrls: ['./local-bank-organization-info-shell.component.scss']\n})\nexport class LocalBankOrganizationInfoShellComponent {\n\n}\n",
+            "sourceCode": "import { Component, signal } from '@angular/core';\nimport { Branch } from '../models/branch.model';\nimport { BranchCode } from '../models/branch-code.model';\n\n@Component({\n  selector: 'app-local-bank-organization-info-shell',\n  templateUrl: './local-bank-organization-info-shell.component.html',\n  styleUrls: ['./local-bank-organization-info-shell.component.scss']\n})\nexport class LocalBankOrganizationInfoShellComponent {\n\n  branchList = signal<Branch[]>([]);\n  branchCodeList = signal<BranchCode[]>([]);\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -559,7 +852,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<app-local-bank-organization-info />\n"
+            "templateData": "<app-local-bank-organization-info\n[branchList]=\"branchList()\"\n[branchCodeList]=\"branchCodeList()\"\n\n />\n"
         },
         {
             "name": "PageNotFoundComponent",
@@ -606,7 +899,7 @@
         },
         {
             "name": "UserEditComponent",
-            "id": "component-UserEditComponent-02840dd3867bb1ee1ebe31f8e105e92b7ea88f472bac2d87c3c18a85ec6a9bb9bc9e198cf9e4704f781da1c8dd6577c9cd71856c88bfadc6726289d6e973130f",
+            "id": "component-UserEditComponent-e8469b103ce8d2120a49c81527edfb167c4edde3a7e5399baccbdefa65e81fcefa9c190341b9d219e967f365b71fb0a671784bcbd498c3aad6d1cdc259733867",
             "file": "src/app/user/user-edit/user-edit.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -681,7 +974,7 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 81,
+                    "line": 79,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -702,7 +995,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 62,
+                    "line": 60,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -764,7 +1057,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';\r\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\r\nimport { UserType } from '../models/user-type.model';\r\nimport { Observable, debounceTime, map, startWith } from 'rxjs';\r\nimport { CustomValidatorService } from 'src/app/core/services/custom-validator.service';\r\nimport { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';\r\nimport { mobileNumberValidator } from 'src/app/core/validators/mobile-number.validator';\r\n\r\n\r\n@Component({\r\n  selector: 'app-user-edit',\r\n  templateUrl: './user-edit.component.html',\r\n  styleUrls: ['./user-edit.component.scss']\r\n})\r\nexport class UserEditComponent implements OnInit , OnChanges{\r\n\r\n  form!: FormGroup;\r\n\r\n  @Input() userTypes!: UserType[];\r\n\r\n\r\n  filteredUserTypeList!: Observable<UserType[]>;\r\n\r\n  constructor(\r\n    private fb: FormBuilder,\r\n    public readonly customValidatorService: CustomValidatorService\r\n    ) { }\r\n\r\n\r\n  ngOnInit(): void {\r\n\r\n    this.initForm();\r\n\r\n  }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n\r\n    this.initForm();\r\n\r\n    if (this.userTypes.length > 0) {\r\n      this.userType.addValidators(autocompleteValidator(this.userTypes))\r\n      this.setUserTypeList()\r\n    }\r\n  }\r\n\r\n  setUserTypeList() {\r\n    console.log('=====',this.userType);\r\n    if (this.userType) {\r\n      this.filteredUserTypeList = this.userType.valueChanges.pipe(\r\n        startWith(''),\r\n        debounceTime(200),\r\n        map(value =>{\r\n          console.log('value====>>>',value)\r\n          console.log('typeof====>>>',typeof value)\r\n        return this.userTypes?.filter((option: UserType) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''\r\n    }));\r\n    }\r\n  }\r\n\r\n\r\n\r\n  initForm() {\r\n    this.form = this.fb.group({\r\n      fullName: ['' , [Validators.required]],\r\n      emailAddress: ['', [Validators.required, Validators.pattern(\"^[a-z0-9._%+-]+@[a-z0-9.-]+\\\\.[a-z]{2,4}$\")]],\r\n      contactNo: ['', [Validators.required, Validators.pattern('[0-9]+'), mobileNumberValidator]],\r\n      gender: ['', [Validators.required]],\r\n      designation: ['', [Validators.required]],\r\n      userType: ['', [Validators.required]],\r\n      division: ['', [Validators.required]],\r\n      branch: ['', [Validators.required]],\r\n      status: ['', [Validators.required]],\r\n\r\n    });\r\n\r\n  }\r\n\r\n\r\n\r\n\r\n  displayAutocompleteValue(e: any): string {\r\n    return e ? e.value : '';\r\n  }\r\n\r\n\r\n\r\n  //\r\n\r\n  get fullName() {\r\n    return this.form.controls['fullName'];\r\n  }\r\n  get emailAddress() {\r\n    return this.form.controls['emailAddress'];\r\n  }\r\n\r\n  get contactNo() {\r\n    return this.form.controls['contactNo'];\r\n  }\r\n\r\n  get gender() {\r\n    return this.form.controls['gender'];\r\n  }\r\n\r\n  get designation() {\r\n    return this.form.controls['designation'];\r\n  }\r\n\r\n  get userType() {\r\n    return this.form.controls['userType'];\r\n  }\r\n\r\n  get division() {\r\n    return this.form.controls['division'];\r\n  }\r\n\r\n  get branch() {\r\n    return this.form.controls['branch'];\r\n  }\r\n\r\n  get status() {\r\n    return this.form.controls['status'];\r\n  }\r\n\r\n\r\n}\r\n\r\n",
+            "sourceCode": "import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';\r\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\r\nimport { UserType } from '../models/user-type.model';\r\nimport { Observable, debounceTime, map, startWith } from 'rxjs';\r\nimport { CustomValidatorService } from 'src/app/core/services/custom-validator.service';\r\nimport { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';\r\nimport { mobileNumberValidator } from 'src/app/core/validators/mobile-number.validator';\r\n\r\n\r\n@Component({\r\n  selector: 'app-user-edit',\r\n  templateUrl: './user-edit.component.html',\r\n  styleUrls: ['./user-edit.component.scss']\r\n})\r\nexport class UserEditComponent implements OnInit, OnChanges {\r\n\r\n  form!: FormGroup;\r\n\r\n  @Input() userTypes!: UserType[];\r\n\r\n\r\n  filteredUserTypeList!: Observable<UserType[]>;\r\n\r\n  constructor(\r\n    private fb: FormBuilder,\r\n    public readonly customValidatorService: CustomValidatorService\r\n  ) { }\r\n\r\n\r\n  ngOnInit(): void {\r\n\r\n    // this.initForm();\r\n\r\n  }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n\r\n    this.initForm();\r\n\r\n    if (this.userTypes.length > 0) {\r\n      this.userType.addValidators(autocompleteValidator(this.userTypes))\r\n      this.setUserTypeList()\r\n    }\r\n  }\r\n\r\n  setUserTypeList() {\r\n    if (this.userType) {\r\n      this.filteredUserTypeList = this.userType.valueChanges.pipe(\r\n        startWith(''),\r\n        debounceTime(200),\r\n        map(value =>\r\n\r\n          this.userTypes?.filter((option: UserType) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''\r\n        ));\r\n    }\r\n  }\r\n\r\n\r\n\r\n  initForm() {\r\n    this.form = this.fb.group({\r\n      fullName: ['', [Validators.required]],\r\n      emailAddress: ['', [Validators.required, Validators.pattern(\"^[a-z0-9._%+-]+@[a-z0-9.-]+\\\\.[a-z]{2,4}$\")]],\r\n      contactNo: ['', [Validators.required, Validators.pattern('[0-9]+'), mobileNumberValidator]],\r\n      gender: ['', [Validators.required]],\r\n      designation: ['', [Validators.required]],\r\n      userType: ['', [Validators.required]],\r\n      division: ['', [Validators.required]],\r\n      branch: ['', [Validators.required]],\r\n      status: ['', [Validators.required]],\r\n\r\n    });\r\n\r\n  }\r\n\r\n\r\n\r\n\r\n  displayAutocompleteValue(e: any): string {\r\n    return e ? e.value : '';\r\n  }\r\n\r\n\r\n\r\n  //\r\n\r\n  get fullName() {\r\n    return this.form.controls['fullName'];\r\n  }\r\n  get emailAddress() {\r\n    return this.form.controls['emailAddress'];\r\n  }\r\n\r\n  get contactNo() {\r\n    return this.form.controls['contactNo'];\r\n  }\r\n\r\n  get gender() {\r\n    return this.form.controls['gender'];\r\n  }\r\n\r\n  get designation() {\r\n    return this.form.controls['designation'];\r\n  }\r\n\r\n  get userType() {\r\n    return this.form.controls['userType'];\r\n  }\r\n\r\n  get division() {\r\n    return this.form.controls['division'];\r\n  }\r\n\r\n  get branch() {\r\n    return this.form.controls['branch'];\r\n  }\r\n\r\n  get status() {\r\n    return this.form.controls['status'];\r\n  }\r\n\r\n\r\n}\r\n\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -825,7 +1118,7 @@
                         "name": "fullName",
                         "type": "",
                         "returnType": "",
-                        "line": 89
+                        "line": 87
                     }
                 },
                 "emailAddress": {
@@ -834,7 +1127,7 @@
                         "name": "emailAddress",
                         "type": "",
                         "returnType": "",
-                        "line": 92
+                        "line": 90
                     }
                 },
                 "contactNo": {
@@ -843,7 +1136,7 @@
                         "name": "contactNo",
                         "type": "",
                         "returnType": "",
-                        "line": 96
+                        "line": 94
                     }
                 },
                 "gender": {
@@ -852,7 +1145,7 @@
                         "name": "gender",
                         "type": "",
                         "returnType": "",
-                        "line": 100
+                        "line": 98
                     }
                 },
                 "designation": {
@@ -861,7 +1154,7 @@
                         "name": "designation",
                         "type": "",
                         "returnType": "",
-                        "line": 104
+                        "line": 102
                     }
                 },
                 "userType": {
@@ -870,7 +1163,7 @@
                         "name": "userType",
                         "type": "",
                         "returnType": "",
-                        "line": 108
+                        "line": 106
                     }
                 },
                 "division": {
@@ -879,7 +1172,7 @@
                         "name": "division",
                         "type": "",
                         "returnType": "",
-                        "line": 112
+                        "line": 110
                     }
                 },
                 "branch": {
@@ -888,7 +1181,7 @@
                         "name": "branch",
                         "type": "",
                         "returnType": "",
-                        "line": 116
+                        "line": 114
                     }
                 },
                 "status": {
@@ -897,15 +1190,15 @@
                         "name": "status",
                         "type": "",
                         "returnType": "",
-                        "line": 120
+                        "line": 118
                     }
                 }
             },
-            "templateData": "<div class=\"flex flex-1\" [formGroup]=\"form\">\r\n  <div class=\"m-6 p-4 rounded-md bg-white h-full w-full\">\r\n    <h2 class=\"my-2\">New User</h2>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <div class=\"grid grid-cols-2 gap-x-12 pt-6\">\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Full Name</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input aria-label=\"Full Name\" matInput type=\"text\" placeholder=\"Enter Full Name\" formControlName=\"fullName\"\r\n            class=\"text-base\">\r\n          <mat-error *ngIf=\"fullName.errors?.['required']\"> Full Name is mandatory.</mat-error>\r\n\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Email Address</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input aria-label=\"Email Address\" type=\"email\" matInput placeholder=\"Email Address\"\r\n            formControlName=\"emailAddress\" class=\"text-base\">\r\n          <mat-error *ngIf=\"emailAddress.errors?.['required']\"> Email Address is mandatory.</mat-error>\r\n\r\n          <mat-error *ngIf=\"emailAddress.errors?.['pattern']\"> Invalid Email Address.</mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Phone Number</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input aria-label=\"Phone Number\" minlength=\"11\" maxlength=\"11\" type=\"text\" matInput placeholder=\"+880\"\r\n            formControlName=\"contactNo\" class=\"text-base\">\r\n\r\n          <mat-error *ngIf=\"contactNo.errors?.['required']\"> Mobile Number is mandatory.</mat-error>\r\n          <mat-error *ngIf=\"contactNo.errors?.['pattern']\"> Only numerical digits are allowed for mobile\r\n            number.</mat-error>\r\n          <mat-error *ngIf=\"!contactNo.errors?.['pattern'] && contactNo.errors?.['invalidMobileNumber']\">\r\n            {{contactNo.errors?.['invalidMobileNumber'].message}}\r\n          </mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Gender</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <mat-select aria-label=\"Gender\" formControlName=\"gender\" placeholder=\"Please Select\">\r\n            <mat-option value=\"female\">Female</mat-option>\r\n            <mat-option value=\"male\">Male</mat-option>\r\n          </mat-select>\r\n          <mat-error *ngIf=\"gender.errors?.['required']\">\r\n            Gender is mandatory.\r\n          </mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Designation</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input aria-label=\"Designation\" matInput type=\"text\" placeholder=\"Enter Designation\"\r\n            formControlName=\"designation\" class=\"text-base\">\r\n          <mat-error *ngIf=\"designation.errors?.['required']\">\r\n            Designation is mandatory.\r\n          </mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">User Type</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input type=\"text\" placeholder=\"Pick one\" aria-label=\"User Type\" matInput formControlName=\"userType\"\r\n            [matAutocomplete]=\"userTypeAutoComplete\">\r\n          <mat-autocomplete autoActiveFirstOption #userTypeAutoComplete=\"matAutocomplete\"\r\n            [displayWith]=\"displayAutocompleteValue\">\r\n            <mat-option *ngFor=\"let element of filteredUserTypeList | async\" [value]=\"element\">\r\n              {{element.value}}\r\n            </mat-option>\r\n          </mat-autocomplete>\r\n          <mat-error *ngIf=\"userType.errors?.['required']\">\r\n            User Type is mandatory.\r\n          </mat-error>\r\n          <mat-error *ngIf=\"userType.errors?.['invalidValue']\">\r\n            Please select valid value.\r\n          </mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Division</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <mat-select aria-label=\"Division\" formControlName=\"division\" placeholder=\"Please Select\">\r\n\r\n          </mat-select>\r\n\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Branch</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <mat-select aria-label=\"Branch\" formControlName=\"branch\" placeholder=\"Please Select\">\r\n\r\n          </mat-select>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Status</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <mat-select aria-label=\"Status\" formControlName=\"status\" placeholder=\"Please Select\">\r\n\r\n          </mat-select>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n"
+            "templateData": "<div class=\"flex flex-1\" [formGroup]=\"form\" *ngIf=\"form\">\r\n  <div class=\"m-6 p-4 rounded-md bg-white h-full w-full\">\r\n    <h2 class=\"my-2\">New User</h2>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <div class=\"grid grid-cols-2 gap-x-12 pt-6\">\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Full Name</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input aria-label=\"Full Name\" matInput type=\"text\" placeholder=\"Enter Full Name\" formControlName=\"fullName\"\r\n            class=\"text-base\">\r\n          <mat-error *ngIf=\"fullName.errors?.['required']\"> Full Name is mandatory.</mat-error>\r\n\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Email Address</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input aria-label=\"Email Address\" type=\"email\" matInput placeholder=\"Email Address\"\r\n            formControlName=\"emailAddress\" class=\"text-base\">\r\n          <mat-error *ngIf=\"emailAddress.errors?.['required']\"> Email Address is mandatory.</mat-error>\r\n\r\n          <mat-error *ngIf=\"emailAddress.errors?.['pattern']\"> Invalid Email Address.</mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Phone Number</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input aria-label=\"Phone Number\" minlength=\"11\" maxlength=\"11\" type=\"text\" matInput  placeholder=\"01XXXXXXXXX\"\r\n            formControlName=\"contactNo\" class=\"text-base\">\r\n\r\n          <mat-error *ngIf=\"contactNo.errors?.['required']\"> Mobile Number is mandatory.</mat-error>\r\n          <mat-error *ngIf=\"contactNo.errors?.['pattern']\"> Only numerical digits are allowed for mobile\r\n            number.</mat-error>\r\n          <mat-error *ngIf=\"!contactNo.errors?.['pattern'] && contactNo.errors?.['invalidMobileNumber']\">\r\n            {{contactNo.errors?.['invalidMobileNumber'].message}}\r\n          </mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Gender</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <mat-select aria-label=\"Gender\" formControlName=\"gender\" placeholder=\"Please Select\">\r\n            <mat-option value=\"female\">Female</mat-option>\r\n            <mat-option value=\"male\">Male</mat-option>\r\n          </mat-select>\r\n          <mat-error *ngIf=\"gender.errors?.['required']\">\r\n            Gender is mandatory.\r\n          </mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Designation</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input aria-label=\"Designation\" matInput type=\"text\" placeholder=\"Enter Designation\"\r\n            formControlName=\"designation\" class=\"text-base\">\r\n          <mat-error *ngIf=\"designation.errors?.['required']\">\r\n            Designation is mandatory.\r\n          </mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">User Type</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <input type=\"text\" placeholder=\"Pick one\" aria-label=\"User Type\" matInput formControlName=\"userType\"\r\n            [matAutocomplete]=\"userTypeAutoComplete\">\r\n          <mat-autocomplete autoActiveFirstOption #userTypeAutoComplete=\"matAutocomplete\"\r\n            [displayWith]=\"displayAutocompleteValue\">\r\n            <mat-option *ngFor=\"let element of filteredUserTypeList | async\" [value]=\"element\">\r\n              {{element.value}}\r\n            </mat-option>\r\n          </mat-autocomplete>\r\n          <mat-error *ngIf=\"userType.errors?.['required']\">\r\n            User Type is mandatory.\r\n          </mat-error>\r\n          <mat-error *ngIf=\"userType.errors?.['invalidValue']\">\r\n            Please select valid value.\r\n          </mat-error>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Division</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <mat-select aria-label=\"Division\" formControlName=\"division\" placeholder=\"Please Select\">\r\n\r\n          </mat-select>\r\n\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Branch</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <mat-select aria-label=\"Branch\" formControlName=\"branch\" placeholder=\"Please Select\">\r\n\r\n          </mat-select>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n      <div class=\"flex items-center justify-between \">\r\n        <p class=\"text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500\">Status</p>\r\n        <mat-form-field appearance=\"outline\" class=\"min-w-[70%]\">\r\n          <mat-select aria-label=\"Status\" formControlName=\"status\" placeholder=\"Please Select\">\r\n\r\n          </mat-select>\r\n        </mat-form-field>\r\n      </div>\r\n\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n"
         },
         {
             "name": "UserEditShellComponent",
-            "id": "component-UserEditShellComponent-0cf9098ba6272a328b5fe4123dfe85d9f8551102144b954fb8c15803e750c1ba4157b18b06482456da95465ccb82933b36f130fdb43242675332e37710c8c573",
+            "id": "component-UserEditShellComponent-9b60cd715710c01b784fe94e1b6a3c12d2b5e02a2298d63772413b8b639baf37bf7e94b8da240aa4b4900f62bba6d3d9fc7cbbcc5c5ca1c5311616384141da86",
             "file": "src/app/user/user-edit-shell/user-edit-shell.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -995,7 +1288,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnChanges, OnInit, SimpleChanges, signal } from '@angular/core';\nimport { UserType } from '../models/user-type.model';\n\n@Component({\n  selector: 'app-user-edit-shell',\n  templateUrl: './user-edit-shell.component.html',\n  styleUrls: ['./user-edit-shell.component.scss']\n})\nexport class UserEditShellComponent implements OnInit, OnChanges {\n\n  userTypes = signal<UserType[]>([]);\n\n  ngOnInit(): void {\n\n    this.getUserType()\n  }\n\n  ngOnChanges(changes: SimpleChanges): void {}\n\n  getUserType() {\n    this.userTypes.set( [] )\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnChanges, OnInit, SimpleChanges, signal } from '@angular/core';\nimport { UserType } from '../models/user-type.model';\n\n@Component({\n  selector: 'app-user-edit-shell',\n  templateUrl: './user-edit-shell.component.html',\n  styleUrls: ['./user-edit-shell.component.scss']\n})\nexport class UserEditShellComponent implements OnInit, OnChanges {\n\n  userTypes = signal<UserType[]>([]);\n\n  ngOnInit(): void {\n\n    this.getUserType()\n  }\n\n  ngOnChanges(changes: SimpleChanges): void {}\n\n  getUserType() {\n    // this.userTypes.set( [] )\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1008,7 +1301,7 @@
                 "OnInit",
                 "OnChanges"
             ],
-            "templateData": "<app-user-edit\n[userTypes]=\"userTypes()\"\n/>\n"
+            "templateData": "<app-user-edit\n\n/>\n"
         }
     ],
     "modules": [
@@ -1318,6 +1611,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "branchCodeList",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/bank-account/test-data/test-data.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "BranchCode[]",
+                "defaultValue": "[\r\n  {\r\n    \"code\": \"1\",\r\n    \"value\": \"Gazipur\"\r\n  },\r\n  {\r\n    \"code\": \"2\",\r\n    \"value\": \"Uttara\"\r\n  }\r\n\r\n\r\n]"
+            },
+            {
                 "name": "branchList",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1326,6 +1629,26 @@
                 "deprecationMessage": "",
                 "type": "Branch[]",
                 "defaultValue": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"value\": \"Dhaka\"\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"value\": \"Mymensingh\"\r\n  }\r\n\r\n\r\n]"
+            },
+            {
+                "name": "countryList",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/bank-account/test-data/test-data.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Country[]",
+                "defaultValue": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"value\": \"Bangladesh\"\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"value\": \"Canada\"\r\n  }\r\n\r\n]"
+            },
+            {
+                "name": "districtList",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/bank-account/test-data/test-data.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "District[]",
+                "defaultValue": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"value\": \"Mymensingh\"\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"value\": \"Sherpur\"\r\n  }\r\n\r\n\r\n]"
             },
             {
                 "name": "EmptyForm",
@@ -1355,7 +1678,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    branchList: branchList,\r\n\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    branchList: branchList,\r\n    branchCodeList:branchCodeList,\r\n    countryList:countryList,\r\n    districtList:districtList,\r\n    thanaList:thanaList\r\n\r\n\r\n  },\r\n}"
             },
             {
                 "name": "MainForm",
@@ -1406,6 +1729,16 @@
                 "deprecationMessage": "",
                 "type": "Preview",
                 "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "thanaList",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/bank-account/test-data/test-data.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Thana[]",
+                "defaultValue": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"value\": \"Turag\"\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"value\": \"Pallobi\"\r\n  }\r\n\r\n]"
             },
             {
                 "name": "userTypes",
@@ -1475,6 +1808,16 @@
         "groupedVariables": {
             "src/app/bank-account/test-data/test-data.ts": [
                 {
+                    "name": "branchCodeList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/bank-account/test-data/test-data.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "BranchCode[]",
+                    "defaultValue": "[\r\n  {\r\n    \"code\": \"1\",\r\n    \"value\": \"Gazipur\"\r\n  },\r\n  {\r\n    \"code\": \"2\",\r\n    \"value\": \"Uttara\"\r\n  }\r\n\r\n\r\n]"
+                },
+                {
                     "name": "branchList",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1483,6 +1826,36 @@
                     "deprecationMessage": "",
                     "type": "Branch[]",
                     "defaultValue": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"value\": \"Dhaka\"\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"value\": \"Mymensingh\"\r\n  }\r\n\r\n\r\n]"
+                },
+                {
+                    "name": "countryList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/bank-account/test-data/test-data.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Country[]",
+                    "defaultValue": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"value\": \"Bangladesh\"\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"value\": \"Canada\"\r\n  }\r\n\r\n]"
+                },
+                {
+                    "name": "districtList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/bank-account/test-data/test-data.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "District[]",
+                    "defaultValue": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"value\": \"Mymensingh\"\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"value\": \"Sherpur\"\r\n  }\r\n\r\n\r\n]"
+                },
+                {
+                    "name": "thanaList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/bank-account/test-data/test-data.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Thana[]",
+                    "defaultValue": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"value\": \"Turag\"\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"value\": \"Pallobi\"\r\n  }\r\n\r\n]"
                 }
             ],
             "src/app/bank-account/local-bank-organization-info/local-bank-organization-info.stories.ts": [
@@ -1504,7 +1877,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    branchList: branchList,\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    branchList: branchList,\r\n    branchCodeList:branchCodeList,\r\n    countryList:countryList,\r\n    districtList:districtList,\r\n    thanaList:thanaList\r\n\r\n\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1771,7 +2144,7 @@
                 "linktype": "component",
                 "name": "LocalBankOrganizationInfoShellComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -1780,7 +2153,7 @@
                 "linktype": "component",
                 "name": "LocalBankOrganizationInfoComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/10",
+                "coverageCount": "0/22",
                 "status": "low"
             },
             {
@@ -1814,6 +2187,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/bank-account/models/branch-code.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "BranchCode",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/bank-account/models/branch.model.ts",
                 "type": "interface",
                 "linktype": "interface",
@@ -1823,11 +2205,78 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/bank-account/models/country.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Country",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/models/district.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "District",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/models/thana.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Thana",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/test-data/test-data.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "branchCodeList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/bank-account/test-data/test-data.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "branchList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/test-data/test-data.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "countryList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/test-data/test-data.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "districtList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/bank-account/test-data/test-data.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "thanaList",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

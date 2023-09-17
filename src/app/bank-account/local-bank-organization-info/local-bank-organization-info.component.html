@@ -40,43 +40,55 @@
               {{element.value}}
             </mat-option>
           </mat-autocomplete>
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Country </p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input type="text" placeholder="Please Select" aria-label="Country" matInput formControlName="country"
+            [matAutocomplete]="countryAutoComplete">
+            <mat-autocomplete autoActiveFirstOption #countryAutoComplete="matAutocomplete"
+            [displayWith]="displayAutocompleteValue">
+            <mat-option *ngFor="let element of filteredCountryList | async" [value]="element">
+              {{element.value}}
+            </mat-option>
+          </mat-autocomplete>
 
         </mat-form-field>
       </div>
 
-      <!-- <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Country </p>
-        <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select aria-label="Country" formControlName="country" placeholder="Please Select">
-            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.value }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div> -->
 
-
-      <!-- <div class="flex items-center justify-between ">
+      <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Name of District </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select aria-label="Name of District" formControlName="district" placeholder="Please Select">
-            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.value }}
+          <input type="text" placeholder="Please Select" aria-label="Name of District" matInput formControlName="district"
+            [matAutocomplete]="districtAutoComplete">
+            <mat-autocomplete autoActiveFirstOption #districtAutoComplete="matAutocomplete"
+            [displayWith]="displayAutocompleteValue">
+            <mat-option *ngFor="let element of filteredDistrictList | async" [value]="element">
+              {{element.value}}
             </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div> -->
+          </mat-autocomplete>
 
-      <!-- <div class="flex items-center justify-between ">
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Thana </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select aria-label="Thana" formControlName="thana" placeholder="Please Select">
-            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.value }}
+          <input type="text" placeholder="Please Select" aria-label="Thana" matInput formControlName="thana"
+            [matAutocomplete]="thanaAutoComplete">
+            <mat-autocomplete autoActiveFirstOption #thanaAutoComplete="matAutocomplete"
+            [displayWith]="displayAutocompleteValue">
+            <mat-option *ngFor="let element of filteredThanaList | async" [value]="element">
+              {{element.value}}
             </mat-option>
-          </mat-select>
+          </mat-autocomplete>
+
+
         </mat-form-field>
-      </div> -->
+      </div>
 
     </div>
   </div>

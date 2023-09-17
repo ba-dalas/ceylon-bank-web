@@ -29,7 +29,7 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Phone Number</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <input aria-label="Phone Number" minlength="11" maxlength="11" type="text" matInput placeholder="+880"
+          <input aria-label="Phone Number" minlength="11" maxlength="11" type="text" matInput  placeholder="01XXXXXXXXX"
             formControlName="contactNo" class="text-base">
 
           <mat-error *ngIf="contactNo.errors?.['required']"> Mobile Number is mandatory.</mat-error>

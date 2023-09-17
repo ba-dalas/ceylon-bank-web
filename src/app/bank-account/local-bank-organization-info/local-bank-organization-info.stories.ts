@@ -10,7 +10,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { LocalBankOrganizationInfoComponent } from "./local-bank-organization-info.component";
-import { branchCodeList, branchList } from "../test-data/test-data";
+import { branchCodeList, branchList, countryList, districtList, thanaList } from "../test-data/test-data";
 
 
 
@@ -52,7 +52,11 @@ export const EmptyForm: Story = {
 export const MainForm: Story = {
   args: {
     branchList: branchList,
-    branchCodeList:branchCodeList
+    branchCodeList:branchCodeList,
+    countryList:countryList,
+    districtList:districtList,
+    thanaList:thanaList
+
 
   },
 };

@@ -4,6 +4,9 @@ import { Observable, debounceTime, map, startWith } from 'rxjs';
 import { Branch } from '../models/branch.model';
 import { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';
 import { BranchCode } from '../models/branch-code.model';
+import { Country } from '../models/country.model';
+import { District } from '../models/district.model';
+import { Thana } from '../models/thana.model';
 
 
 @Component({
@@ -16,9 +19,15 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
   form!: FormGroup;
   @Input() branchList! :Branch[];
   @Input() branchCodeList! :BranchCode[];
+  @Input() countryList! :Country[];
+  @Input() districtList! :District[];
+  @Input() thanaList! :Thana[];
 
   filteredBranchList!: Observable<Branch[]>;
   filteredBranchCodeList!: Observable<BranchCode[]>;
+  filteredCountryList!: Observable<Country[]>;
+  filteredDistrictList!: Observable<District[]>;
+  filteredThanaList!: Observable<Thana[]>;
 
 
 
@@ -39,14 +48,29 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
     this.initForm();
 
-    if (this.branchList.length > 0) {
+    if (this.branchList?.length > 0) {
       this.branchId.addValidators(autocompleteValidator(this.branchList))
       this.setBranchList()
     }
 
-    if (this.branchCodeList.length > 0) {
+    if (this.branchCodeList?.length > 0) {
       this.branchCode.addValidators(autocompleteValidator(this.branchCodeList))
       this.setBranchCodeList()
+    }
+
+    if (this.countryList?.length > 0) {
+      this.country.addValidators(autocompleteValidator(this.countryList))
+      this.setCountryList()
+    }
+
+    if (this.districtList?.length > 0) {
+      this.district.addValidators(autocompleteValidator(this.districtList))
+      this.setDistrictList()
+    }
+
+    if (this.thanaList?.length > 0) {
+      this.thana.addValidators(autocompleteValidator(this.thanaList))
+      this.setThanaList()
     }
 
 
@@ -58,9 +82,9 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
       bankName: [''],
       branchId:[''],
       branchCode:[''],
-      // country:[''],
-      // district:[''],
-      // thana:['']
+      country:[''],
+      district:[''],
+      thana:['']
     });
 
   }
@@ -87,6 +111,39 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
     }
   }
 
+  setCountryList() {
+    if (this.country) {
+      this.filteredCountryList = this.country.valueChanges.pipe(
+        startWith(''),
+        debounceTime(200),
+        map(value =>
+          this.countryList?.filter((option: Country) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''
+        ));
+    }
+  }
+
+  setDistrictList() {
+    if (this.district) {
+      this.filteredDistrictList = this.district.valueChanges.pipe(
+        startWith(''),
+        debounceTime(200),
+        map(value =>
+          this.districtList?.filter((option: District) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''
+        ));
+    }
+  }
+
+  setThanaList() {
+    if (this.thana) {
+      this.filteredThanaList = this.thana.valueChanges.pipe(
+        startWith(''),
+        debounceTime(200),
+        map(value =>
+          this.thanaList?.filter((option: Thana) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''
+        ));
+    }
+  }
+
   displayAutocompleteValue(e: any): string {
     return e ? e.value : '';
   }
@@ -106,16 +163,16 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
   get branchCode() {
     return this.form.controls['branchCode'];
   }
-  // get country() {
-  //   return this.form.controls['country'];
-  // }
-  // get district() {
-  //   return this.form.controls['district'];
-  // }
+  get country() {
+    return this.form.controls['country'];
+  }
+  get district() {
+    return this.form.controls['district'];
+  }
 
-  // get thana() {
-  //   return this.form.controls['thana'];
-  // }
+  get thana() {
+    return this.form.controls['thana'];
+  }
 
 
 }
