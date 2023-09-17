@@ -1,4 +1,4 @@
-<div [formGroup]="form">
+<div [formGroup]="form" *ngIf="form">
 
   <div class="  ">
     <h2>General Information</h2>
@@ -20,7 +20,7 @@
           <input type="text" placeholder="Please Select" aria-label="Branch Name" matInput formControlName="branchId"
             [matAutocomplete]="branchAutoComplete">
           <mat-autocomplete autoActiveFirstOption #branchAutoComplete="matAutocomplete"
-            [displayWith]="displayBranch">
+            [displayWith]="displayAutocompleteValue">
             <mat-option *ngFor="let element of filteredBranchList | async" [value]="element">
               {{element.value}}
             </mat-option>
@@ -29,16 +29,20 @@
       </div>
 
 
-      <!-- <div class="flex items-center justify-between ">
+      <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Branch Code </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select aria-label="Branch Code" formControlName="branchCode" placeholder="Please Select">
-            <mat-option *ngFor="let branch of branchList" [value]="branch.id">
-              {{ branch.value }}
+            <input type="text" placeholder="Please Select" aria-label="Branch Code" matInput formControlName="branchCode"
+            [matAutocomplete]="branchCodeAutoComplete">
+            <mat-autocomplete autoActiveFirstOption #branchCodeAutoComplete="matAutocomplete"
+            [displayWith]="displayAutocompleteValue">
+            <mat-option *ngFor="let element of filteredBranchCodeList | async" [value]="element">
+              {{element.value}}
             </mat-option>
-          </mat-select>
+          </mat-autocomplete>
+
         </mat-form-field>
-      </div> -->
+      </div>
 
       <!-- <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Country </p>

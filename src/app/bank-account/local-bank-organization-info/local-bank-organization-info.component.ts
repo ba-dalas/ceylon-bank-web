@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable, debounceTime, map, startWith } from 'rxjs';
 import { Branch } from '../models/branch.model';
 import { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';
+import { BranchCode } from '../models/branch-code.model';
 
 
 @Component({
@@ -14,7 +15,12 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
   form!: FormGroup;
   @Input() branchList! :Branch[];
+  @Input() branchCodeList! :BranchCode[];
+
   filteredBranchList!: Observable<Branch[]>;
+  filteredBranchCodeList!: Observable<BranchCode[]>;
+
+
 
 
   constructor(
@@ -24,12 +30,7 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
   ngOnInit(): void {
 
-    this.initForm();
-    // this.branchList =[
-    //   { id:'1' , value: 'Dhaka' },
-    //   { id: '2', value: 'Mymensingh' },
-
-    // ]
+    // this.initForm();
 
   }
 
@@ -38,10 +39,14 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
 
     this.initForm();
 
-
     if (this.branchList.length > 0) {
       this.branchId.addValidators(autocompleteValidator(this.branchList))
       this.setBranchList()
+    }
+
+    if (this.branchCodeList.length > 0) {
+      this.branchCode.addValidators(autocompleteValidator(this.branchCodeList))
+      this.setBranchCodeList()
     }
 
 
@@ -52,7 +57,7 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
     this.form = this.fb.group({
       bankName: [''],
       branchId:[''],
-      // branchCode:[''],
+      branchCode:[''],
       // country:[''],
       // district:[''],
       // thana:['']
@@ -71,7 +76,18 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
     }
   }
 
-  displayBranch(e: any): string {
+  setBranchCodeList() {
+    if (this.branchCode) {
+      this.filteredBranchCodeList = this.branchCode.valueChanges.pipe(
+        startWith(''),
+        debounceTime(200),
+        map(value =>
+          this.branchCodeList?.filter((option: BranchCode) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''
+        ));
+    }
+  }
+
+  displayAutocompleteValue(e: any): string {
     return e ? e.value : '';
   }
 
@@ -87,9 +103,9 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
   get branchId() {
     return this.form.controls['branchId'];
   }
-  // get branchCode() {
-  //   return this.form.controls['branchCode'];
-  // }
+  get branchCode() {
+    return this.form.controls['branchCode'];
+  }
   // get country() {
   //   return this.form.controls['country'];
   // }
