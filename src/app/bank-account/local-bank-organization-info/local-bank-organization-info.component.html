@@ -2,7 +2,7 @@
 
   <!-- general info  -->
   <div class="  ">
-    <h2 class="my-2">General Information</h2>
+    <h2 class="my-2 font-bold">General Information</h2>
 
     <mat-divider></mat-divider>
 
@@ -33,9 +33,9 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Branch Code </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-            <input type="text" placeholder="Please Select" aria-label="Branch Code" matInput formControlName="branchCode"
+          <input type="text" placeholder="Please Select" aria-label="Branch Code" matInput formControlName="branchCode"
             [matAutocomplete]="branchCodeAutoComplete">
-            <mat-autocomplete autoActiveFirstOption #branchCodeAutoComplete="matAutocomplete"
+          <mat-autocomplete autoActiveFirstOption #branchCodeAutoComplete="matAutocomplete"
             [displayWith]="displayAutocompleteValue">
             <mat-option *ngFor="let element of filteredBranchCodeList | async" [value]="element">
               {{element.value}}
@@ -49,7 +49,7 @@
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <input type="text" placeholder="Please Select" aria-label="Country" matInput formControlName="country"
             [matAutocomplete]="countryAutoComplete">
-            <mat-autocomplete autoActiveFirstOption #countryAutoComplete="matAutocomplete"
+          <mat-autocomplete autoActiveFirstOption #countryAutoComplete="matAutocomplete"
             [displayWith]="displayAutocompleteValue">
             <mat-option *ngFor="let element of filteredCountryList | async" [value]="element">
               {{element.value}}
@@ -63,9 +63,9 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium">Name of District </p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <input type="text" placeholder="Please Select" aria-label="Name of District" matInput formControlName="district"
-            [matAutocomplete]="districtAutoComplete">
-            <mat-autocomplete autoActiveFirstOption #districtAutoComplete="matAutocomplete"
+          <input type="text" placeholder="Please Select" aria-label="Name of District" matInput
+            formControlName="district" [matAutocomplete]="districtAutoComplete">
+          <mat-autocomplete autoActiveFirstOption #districtAutoComplete="matAutocomplete"
             [displayWith]="displayAutocompleteValue">
             <mat-option *ngFor="let element of filteredDistrictList | async" [value]="element">
               {{element.value}}
@@ -80,7 +80,7 @@
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <input type="text" placeholder="Please Select" aria-label="Thana" matInput formControlName="thana"
             [matAutocomplete]="thanaAutoComplete">
-            <mat-autocomplete autoActiveFirstOption #thanaAutoComplete="matAutocomplete"
+          <mat-autocomplete autoActiveFirstOption #thanaAutoComplete="matAutocomplete"
             [displayWith]="displayAutocompleteValue">
             <mat-option *ngFor="let element of filteredThanaList | async" [value]="element">
               {{element.value}}
@@ -96,13 +96,186 @@
 
   <!-- Company registration info -->
   <div>
-    <h2 class="my-2">Company Registration Info</h2>
+    <h2 class="my-2 font-bold">Company Registration Info</h2>
 
     <mat-divider></mat-divider>
 
     <div class="grid grid-cols-2 gap-x-12 pt-6">
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Incorporation Number</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="Incorporation Number" matInput type="text" placeholder="Enter Incorporation Number"
+            formControlName="incorporationNumber">
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Incorporation Date</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input matInput [matDatepicker]="picker" aria-label="Incorporation Date" placeholder="Enter Date
+          " formControlName="incorporationDate">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Registration Authority</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="Registration Authority" matInput type="text" placeholder="Enter Registration Authority"
+            formControlName="registrationAuthority">
+        </mat-form-field>
+      </div>
+
+      <div class="col-span-2">
+        <div class=" flex items-center justify-between  ">
+          <p class="text-lg font-medium">Registered Address</p>
+          <mat-form-field appearance="outline" class="min-w-[85%]">
+            <input aria-label="Registered Address" matInput type="text" placeholder="Enter Registered Address"
+              formControlName="registeredAddress">
+          </mat-form-field>
+        </div>
+
+      </div>
 
     </div>
+  </div>
+
+  <!-- Trade License info -->
+  <div>
+    <h2 class="my-2 font-bold">Trade License Info</h2>
+    <mat-divider></mat-divider>
+    <div class="grid grid-cols-2 gap-x-12 pt-6">
+
+      <div class="flex items-center justify-between  ">
+        <p class="text-lg font-medium">Trade License Number</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="Trade License Number" matInput type="text" placeholder="Enter Trade License Number"
+            formControlName="tradeLicenseNumber">
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Date of Trade License</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="Date of Trade License" matInput type="text" placeholder="Enter Date of Trade License"
+            formControlName="dateOfTradeLicense">
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Expired Date</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input matInput [matDatepicker]="picker1" aria-label="Expired Date" placeholder="Enter Expired Date
+          " formControlName="expiredDate">
+          <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">Issuing Authority</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="Issuing Authority" matInput type="text" placeholder="Enter Issuing Authority"
+            formControlName="issuingAuthority">
+        </mat-form-field>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Taxpayer identification -->
+
+  <div>
+    <h2 class="my-2 font-bold">Taxpayer Identification</h2>
+    <mat-divider></mat-divider>
+    <div class="grid grid-cols-2 gap-x-12 pt-6">
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium">TIN Number</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="TIN Number" matInput type="text" placeholder="Enter TIN Number"
+            formControlName="tinNumber">
+        </mat-form-field>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Office Adress -->
+
+  <div>
+    <h2 class="my-2 font-bold">Office Adress</h2>
+    <mat-divider></mat-divider>
+    <div class="grid grid-cols-2 gap-x-12 pt-6">
+
+      <div class="flex items-center justify-between  ">
+        <p class="text-lg font-medium">District</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input type="text" placeholder="Please Select" aria-label="Ofc Name of District" matInput
+            formControlName="OfcDistrict" [matAutocomplete]="ofcDistrictAutoComplete">
+          <mat-autocomplete autoActiveFirstOption #ofcDistrictAutoComplete="matAutocomplete"
+            [displayWith]="displayAutocompleteValue">
+            <mat-option *ngFor="let element of filteredOfcDistrictList | async" [value]="element">
+              {{element.value}}
+            </mat-option>
+          </mat-autocomplete>
+
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between  ">
+        <p class="text-lg font-medium">Thana </p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input type="text" placeholder="Please Select" aria-label="Ofc Thana" matInput formControlName="ofcThana"
+            [matAutocomplete]="ofcThanaAutoComplete">
+          <mat-autocomplete autoActiveFirstOption #ofcThanaAutoComplete="matAutocomplete"
+            [displayWith]="displayAutocompleteValue">
+            <mat-option *ngFor="let element of filteredOfcThanaList | async" [value]="element">
+              {{element.value}}
+            </mat-option>
+          </mat-autocomplete>
+
+        </mat-form-field>
+      </div>
+
+      <div class="col-span-2">
+        <div class=" flex items-center justify-between ">
+          <p class="text-lg font-medium"> Address</p>
+          <mat-form-field appearance="outline" class="min-w-[85%]">
+            <input aria-label="Address" matInput type="text" placeholder="Enter Address"
+              formControlName="ofcAddress">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium font-medium ">Email </p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="Email Address" type="email" matInput placeholder="Email Address"
+            formControlName="ofcEmailAddress" class="text-base">
+        </mat-form-field>
+      </div>
+
+      <div class="flex items-center justify-between ">
+        <p class="text-lg font-medium ">Mobile Number</p>
+        <mat-form-field appearance="outline" class="min-w-[70%]">
+          <input aria-label="Ofc Phone Number" minlength="11" maxlength="11" type="text" matInput  placeholder="01XXXXXXXXX"
+            formControlName="ofcContactNo" class="text-base">
+        </mat-form-field>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Account Information -->
+
+  <div class="m-6 bg-red-200">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
 
   </div>
 

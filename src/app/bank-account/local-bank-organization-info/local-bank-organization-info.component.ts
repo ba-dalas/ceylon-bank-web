@@ -23,11 +23,14 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
   @Input() districtList! :District[];
   @Input() thanaList! :Thana[];
 
+
   filteredBranchList!: Observable<Branch[]>;
   filteredBranchCodeList!: Observable<BranchCode[]>;
   filteredCountryList!: Observable<Country[]>;
   filteredDistrictList!: Observable<District[]>;
   filteredThanaList!: Observable<Thana[]>;
+  filteredOfcDistrictList!: Observable<District[]>;
+  filteredOfcThanaList!: Observable<Thana[]>;
 
 
 
@@ -73,6 +76,15 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
       this.setThanaList()
     }
 
+    if (this.districtList?.length > 0) {
+      this.OfcDistrict.addValidators(autocompleteValidator(this.districtList))
+      this.setOfcDistrictList()
+    }
+
+    if (this.thanaList?.length > 0) {
+      this.ofcThana.addValidators(autocompleteValidator(this.thanaList))
+      this.setOfcThanaList()
+    }
 
   }
 
@@ -84,7 +96,21 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
       branchCode:[''],
       country:[''],
       district:[''],
-      thana:['']
+      thana:[''],
+      incorporationNumber:[''],
+      incorporationDate:[''],
+      registrationAuthority:[''],
+      registeredAddress:[''],
+      tradeLicenseNumber:[''],
+      dateOfTradeLicense:[''],
+      expiredDate:[''],
+      issuingAuthority:[''],
+      tinNumber:[''],
+      OfcDistrict:[''],
+      ofcThana:[''],
+      ofcAddress:[''],
+      ofcEmailAddress:[''],
+      ofcContactNo:[''],
     });
 
   }
@@ -144,6 +170,29 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
     }
   }
 
+  setOfcDistrictList() {
+    if (this.OfcDistrict) {
+      this.filteredOfcDistrictList = this.OfcDistrict.valueChanges.pipe(
+        startWith(''),
+        debounceTime(200),
+        map(value =>
+          this.districtList?.filter((option: District) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''
+        ));
+    }
+  }
+
+  setOfcThanaList() {
+    if (this.ofcThana) {
+      this.filteredOfcThanaList = this.ofcThana.valueChanges.pipe(
+        startWith(''),
+        debounceTime(200),
+        map(value =>
+          this.thanaList?.filter((option: Thana) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''
+        ));
+    }
+  }
+
+
   displayAutocompleteValue(e: any): string {
     return e ? e.value : '';
   }
@@ -173,6 +222,57 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
   get thana() {
     return this.form.controls['thana'];
   }
+  get incorporationNumber() {
+    return this.form.controls['incorporationNumber'];
+  }
+  get incorporationDate() {
+    return this.form.controls['incorporationDate'];
+  }
+  get registrationAuthority() {
+    return this.form.controls['registrationAuthority'];
+  }
+  get registeredAddress() {
+    return this.form.controls['registeredAddress'];
+  }
+  get tradeLicenseNumber() {
+    return this.form.controls['tradeLicenseNumber'];
+  }
+  get dateOfTradeLicense() {
+    return this.form.controls['dateOfTradeLicense'];
+  }
+  get expiredDate() {
+    return this.form.controls['expiredDate'];
+  }
+
+  get issuingAuthority() {
+    return this.form.controls['issuingAuthority'];
+  }
+
+  get tinNumber() {
+    return this.form.controls['tinNumber'];
+  }
+
+  get OfcDistrict() {
+    return this.form.controls['OfcDistrict'];
+  }
+  get ofcThana() {
+    return this.form.controls['ofcThana'];
+  }
+
+  get ofcAddress() {
+    return this.form.controls['ofcAddress'];
+  }
+
+  get ofcEmailAddress() {
+    return this.form.controls['ofcEmailAddress'];
+  }
+  get ofcContactNo() {
+    return this.form.controls['ofcContactNo'];
+  }
+
+
+
+
 
 
 }

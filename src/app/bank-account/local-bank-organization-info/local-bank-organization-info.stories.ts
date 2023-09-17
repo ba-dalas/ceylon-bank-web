@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 
 import { LocalBankOrganizationInfoComponent } from "./local-bank-organization-info.component";
 import { branchCodeList, branchList, countryList, districtList, thanaList } from "../test-data/test-data";
+import { SharedModule } from "src/app/shared/shared.module";
 
 
 
@@ -23,13 +24,7 @@ const meta: Meta<LocalBankOrganizationInfoComponent> = {
       imports: [
         CommonModule,
         BrowserAnimationsModule,
-        MatButtonModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatAutocompleteModule,
-        MatDividerModule,
-        FormsModule
+        SharedModule
       ],
     })
   ],
