@@ -76,6 +76,9 @@
               {{element.value}}
             </mat-option>
           </mat-autocomplete>
+          <mat-error *ngIf="userType.errors?.['required']">
+            User Type is mandatory.
+          </mat-error>
           <mat-error *ngIf="userType.errors?.['invalidValue']">
             Please select valid value.
           </mat-error>
