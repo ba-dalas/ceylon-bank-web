@@ -12,7 +12,7 @@ import { mobileNumberValidator } from 'src/app/core/validators/mobile-number.val
   templateUrl: './user-edit.component.html',
   styleUrls: ['./user-edit.component.scss']
 })
-export class UserEditComponent implements OnInit , OnChanges{
+export class UserEditComponent implements OnInit, OnChanges {
 
   form!: FormGroup;
 
@@ -24,12 +24,12 @@ export class UserEditComponent implements OnInit , OnChanges{
   constructor(
     private fb: FormBuilder,
     public readonly customValidatorService: CustomValidatorService
-    ) { }
+  ) { }
 
 
   ngOnInit(): void {
 
-    this.initForm();
+    // this.initForm();
 
   }
 
@@ -49,6 +49,7 @@ export class UserEditComponent implements OnInit , OnChanges{
         startWith(''),
         debounceTime(200),
         map(value =>
+
           this.userTypes?.filter((option: UserType) => option?.value?.toLowerCase().includes(value.toString().toLowerCase())) ?? ''
         ));
     }
@@ -58,7 +59,7 @@ export class UserEditComponent implements OnInit , OnChanges{
 
   initForm() {
     this.form = this.fb.group({
-      fullName: ['' , [Validators.required]],
+      fullName: ['', [Validators.required]],
       emailAddress: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       contactNo: ['', [Validators.required, Validators.pattern('[0-9]+'), mobileNumberValidator]],
       gender: ['', [Validators.required]],
