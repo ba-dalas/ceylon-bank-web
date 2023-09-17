@@ -1,55 +1,72 @@
 <div class="flex flex-1" [formGroup]="form">
   <div class="m-6 p-4 rounded-md bg-white h-full w-full">
-    <h2>New User</h2>
+    <h2 class="my-2">New User</h2>
 
     <mat-divider></mat-divider>
 
     <div class="grid grid-cols-2 gap-x-12 pt-6">
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Full Name</p>
+        <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Full Name</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <input aria-label="Full Name" matInput type="text" placeholder="Enter Full Name" formControlName="fullName"
             class="text-base">
+          <mat-error *ngIf="fullName.errors?.['required']"> Full Name is mandatory.</mat-error>
 
         </mat-form-field>
       </div>
 
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Email Address</p>
+        <p class="text-lg font-medium font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Email Address</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <input aria-label="Email Address" type="email" matInput placeholder="Email Address"
             formControlName="emailAddress" class="text-base">
+          <mat-error *ngIf="emailAddress.errors?.['required']"> Email Address is mandatory.</mat-error>
+
+          <mat-error *ngIf="emailAddress.errors?.['pattern']"> Invalid Email Address.</mat-error>
         </mat-form-field>
       </div>
 
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Phone Number</p>
+        <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Phone Number</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <input aria-label="Phone Number" minlength="11" maxlength="11" type="text" matInput placeholder="+880"
             formControlName="contactNo" class="text-base">
+
+          <mat-error *ngIf="contactNo.errors?.['required']"> Mobile Number is mandatory.</mat-error>
+          <mat-error *ngIf="contactNo.errors?.['pattern']"> Only numerical digits are allowed for mobile
+            number.</mat-error>
+          <mat-error *ngIf="!contactNo.errors?.['pattern'] && contactNo.errors?.['invalidMobileNumber']">
+            {{contactNo.errors?.['invalidMobileNumber'].message}}
+          </mat-error>
         </mat-form-field>
       </div>
 
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Gender</p>
+        <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Gender</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <mat-select aria-label="Gender" formControlName="gender" placeholder="Please Select">
             <mat-option value="female">Female</mat-option>
             <mat-option value="male">Male</mat-option>
           </mat-select>
+          <mat-error *ngIf="gender.errors?.['required']">
+            Gender is mandatory.
+          </mat-error>
         </mat-form-field>
       </div>
 
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Designation</p>
+        <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Designation</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <input aria-label="Designation" matInput type="text" placeholder="Enter Designation"
             formControlName="designation" class="text-base">
+          <mat-error *ngIf="designation.errors?.['required']">
+            Designation is mandatory.
+          </mat-error>
         </mat-form-field>
       </div>
 
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">User Type</p>
+        <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">User Type</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <input type="text" placeholder="Pick one" aria-label="User Type" matInput formControlName="userType"
             [matAutocomplete]="userTypeAutoComplete">
@@ -66,16 +83,17 @@
       </div>
 
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Division</p>
+        <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Division</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <mat-select aria-label="Division" formControlName="division" placeholder="Please Select">
 
           </mat-select>
+
         </mat-form-field>
       </div>
 
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Branch</p>
+        <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Branch</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <mat-select aria-label="Branch" formControlName="branch" placeholder="Please Select">
 
@@ -84,7 +102,7 @@
       </div>
 
       <div class="flex items-center justify-between ">
-        <p class="text-lg font-medium">Status</p>
+        <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Status</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
           <mat-select aria-label="Status" formControlName="status" placeholder="Please Select">
 

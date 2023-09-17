@@ -4,6 +4,7 @@ import { UserType } from '../models/user-type.model';
 import { Observable, debounceTime, map, startWith } from 'rxjs';
 import { CustomValidatorService } from 'src/app/core/services/custom-validator.service';
 import { autocompleteValidator } from 'src/app/core/validators/autocomplete.validator';
+import { mobileNumberValidator } from 'src/app/core/validators/mobile-number.validator';
 
 
 @Component({
@@ -57,15 +58,15 @@ export class UserEditComponent implements OnInit , OnChanges{
 
   initForm() {
     this.form = this.fb.group({
-      fullName: [''],
+      fullName: ['' , [Validators.required]],
       emailAddress: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
-      contactNo: [''],
-      gender: [''],
-      designation: [''],
-      userType: [''],
-      division: [''],
-      branch: [''],
-      status: [''],
+      contactNo: ['', [Validators.required, Validators.pattern('[0-9]+'), mobileNumberValidator]],
+      gender: ['', [Validators.required]],
+      designation: ['', [Validators.required]],
+      userType: ['', [Validators.required]],
+      division: ['', [Validators.required]],
+      branch: ['', [Validators.required]],
+      status: ['', [Validators.required]],
 
     });
 
