@@ -10,7 +10,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { MatDividerModule } from '@angular/material/divider';
 import { UserEditComponent } from "./user-edit.component";
-import { userTypes } from "../test-data/test-data";
+import { branchList, divisionList, userTypes } from "../test-data/test-data";
 import { MatSelectModule } from "@angular/material/select";
 
 
@@ -53,6 +53,8 @@ export const EmptyForm: Story = {
 
 export const MainForm: Story = {
   args: {
-    userTypes: userTypes
+    userTypes: userTypes,
+    divisionList:divisionList,
+    branchList:branchList
   },
 };

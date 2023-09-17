@@ -68,7 +68,7 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">User Type</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <input type="text" placeholder="Pick one" aria-label="User Type" matInput formControlName="userType"
+          <input type="text" placeholder="Please select" aria-label="User Type" matInput formControlName="userType"
             [matAutocomplete]="userTypeAutoComplete">
           <mat-autocomplete autoActiveFirstOption #userTypeAutoComplete="matAutocomplete"
             [displayWith]="displayAutocompleteValue">
@@ -88,9 +88,14 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Division</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select aria-label="Division" formControlName="division" placeholder="Please Select">
-
-          </mat-select>
+          <input type="text" placeholder="Please select" aria-label="Division" matInput formControlName="division"
+            [matAutocomplete]="divisionAutoComplete">
+          <mat-autocomplete autoActiveFirstOption #divisionAutoComplete="matAutocomplete"
+            [displayWith]="displayAutocompleteValue">
+            <mat-option *ngFor="let element of filteredDivisionList | async" [value]="element">
+              {{element.value}}
+            </mat-option>
+          </mat-autocomplete>
 
         </mat-form-field>
       </div>
@@ -98,9 +103,14 @@
       <div class="flex items-center justify-between ">
         <p class="text-lg font-medium after:content-['*'] after:ml-0.5 after:text-red-500">Branch</p>
         <mat-form-field appearance="outline" class="min-w-[70%]">
-          <mat-select aria-label="Branch" formControlName="branch" placeholder="Please Select">
-
-          </mat-select>
+          <input type="text" placeholder="Please select" aria-label="Branch" matInput formControlName="branch"
+          [matAutocomplete]="branchAutoComplete">
+        <mat-autocomplete autoActiveFirstOption #branchAutoComplete="matAutocomplete"
+          [displayWith]="displayAutocompleteValue">
+          <mat-option *ngFor="let element of filteredBranchList | async" [value]="element">
+            {{element.value}}
+          </mat-option>
+        </mat-autocomplete>
         </mat-form-field>
       </div>
 
