@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserEditShellComponent } from './user-edit-shell/user-edit-shell.component';
+import { UserListShellComponent } from './user-list-shell/user-list-shell.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,12 @@ const routes: Routes = [
   },
   {
     path:'list',
-    component:UserEditShellComponent
+    component:UserListShellComponent
+
+  },
+  {
+    path: ':id/edit',
+    component: UserEditShellComponent,
 
   }
 
