@@ -12,12 +12,18 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
 @NgModule({
   declarations: [
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +38,9 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatDividerModule,
     MatAutocompleteModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatIconModule,
+    MatMenuModule
 
   ],
   exports:[
@@ -46,7 +54,11 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatDividerModule,
     MatAutocompleteModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatIconModule,
+    HeaderComponent,
+    FooterComponent,
+    MatMenuModule
   ]
 })
 export class SharedModule { }

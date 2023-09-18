@@ -1,0 +1,25 @@
+<div class="w-full bg-white py-2">
+  <div class="flex w-full py-2 px-6 justify-between items-center">
+    <img src="../../../assets/images/logo.jpg" alt="">
+    <div class=" flex space-x-4 ">
+      <button class="py-1.5 px-3 border-2 rounded-md  border-gray-400 ">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <div class="flex items-center py-1.5 px-2 space-x-2 border-2 rounded-md " [matMenuTriggerFor]="logoutDropdown">
+        <img src="../../../assets/images/Avatar.png" alt="">
+        <div class="px-2">
+            <p class="my-0 py-0 text-base">Ashrafuzzaman</p>
+            <p class="my-0 py-0 text-base">Applicant</p>
+        </div>
+        <mat-icon>expand_more</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-menu #logoutDropdown="matMenu">
+  <button mat-menu-item class="px-6">
+    <mat-icon>lock</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>
