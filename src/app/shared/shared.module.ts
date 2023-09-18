@@ -16,6 +16,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import { LayoutComponent } from './layout/layout.component';
+
 
 
 
@@ -23,7 +25,9 @@ import {MatMenuModule} from '@angular/material/menu';
   declarations: [
     PageNotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LayoutComponent,
+
   ],
   imports: [
     CommonModule,
@@ -40,7 +44,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+
 
   ],
   exports:[
@@ -58,7 +63,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     HeaderComponent,
     FooterComponent,
-    MatMenuModule
+    MatMenuModule,
+    LayoutComponent
+
   ]
 })
 export class SharedModule { }

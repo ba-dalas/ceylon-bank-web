@@ -35,7 +35,7 @@ export class UserEditComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
 
-    // this.initForm();
+    this.initForm();
 
   }
 
