@@ -111,6 +111,38 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
       ofcAddress:[''],
       ofcEmailAddress:[''],
       ofcContactNo:[''],
+      acTitleBn:[''],
+      acTitleEn:[''],
+      natureOfAcc:[''],
+      businessSector:[''],
+      subCategory:[''],
+      currency:[''],
+      entityType:[''],
+      accType:[''],
+      accOperatingPersonName:[''],
+      accOperatingPersonFatherName:[''],
+      accOperatingPersonMotherName:[''],
+      accOperatingPersonNid:[''],
+      accOperatingPersonSpouseName:[''],
+      accOperatingPersonDob:[''],
+      nationality:[''],
+      gender:[''],
+      relationWithOrganization:[''],
+      accOperatingTin:[''],
+      accOperatingOccupation:[''],
+      monthlyIncome:[''],
+      sourceOfFund:[''],
+      accOperatingPresentDistrict:[''],
+      accOperatingPresentThana:[''],
+      accOperatingPresentAddress:[''],
+      accOperatingPresentEmail:[''],
+      accOperatingPresentContact:[''],
+      accOperatingPermanentDistrict:[''],
+      accOperatingPermanentThana:[''],
+      accOperatingPermanentAddress:[''],
+      accOperatingPermanentEmail:[''],
+      accOperatingPermanentContact:[''],
+
     });
 
   }
@@ -270,8 +302,125 @@ export class LocalBankOrganizationInfoComponent implements OnInit , OnChanges{
     return this.form.controls['ofcContactNo'];
   }
 
+  get acTitleBn() {
+    return this.form.controls['acTitleBn'];
+  }
 
+  get acTitleEn() {
+    return this.form.controls['acTitleEn'];
+  }
 
+  get natureOfAcc() {
+    return this.form.controls['natureOfAcc'];
+  }
+
+  get businessSector() {
+    return this.form.controls['businessSector'];
+  }
+
+  get subCategory() {
+    return this.form.controls['subCategory'];
+  }
+
+  get currency() {
+    return this.form.controls['currency'];
+  }
+
+  get entityType() {
+    return this.form.controls['entityType'];
+  }
+
+  get accType() {
+    return this.form.controls['accType'];
+  }
+
+  get accOperatingPersonName() {
+    return this.form.controls['accOperatingPersonName'];
+  }
+
+  get accOperatingPersonFatherName() {
+    return this.form.controls['accOperatingPersonFatherName'];
+  }
+
+  get accOperatingPersonMotherName() {
+    return this.form.controls['accOperatingPersonMotherName'];
+  }
+
+  get accOperatingPersonSpouseName() {
+    return this.form.controls['accOperatingPersonSpouseName'];
+  }
+
+  get accOperatingPersonNid() {
+    return this.form.controls['accOperatingPersonNid'];
+  }
+
+  get accOperatingPersonDob() {
+    return this.form.controls['accOperatingPersonDob'];
+  }
+  get nationality() {
+    return this.form.controls['nationality'];
+  }
+
+  get gender() {
+    return this.form.controls['gender'];
+  }
+
+  get relationWithOrganization() {
+    return this.form.controls['relationWithOrganization'];
+  }
+
+  get accOperatingTin() {
+    return this.form.controls['accOperatingTin'];
+  }
+
+  get accOperatingOccupation() {
+    return this.form.controls['accOperatingOccupation'];
+  }
+
+  get monthlyIncome() {
+    return this.form.controls['monthlyIncome'];
+  }
+
+  get sourceOfFund() {
+    return this.form.controls['sourceOfFund'];
+  }
+
+  get accOperatingPresentDistrict() {
+    return this.form.controls['accOperatingPresentDistrict'];
+  }
+
+  get accOperatingPresentThana() {
+    return this.form.controls['accOperatingPresentThana'];
+  }
+
+  get accOperatingPresentAddress() {
+    return this.form.controls['accOperatingPresentAddress'];
+  }
+  get accOperatingPresentEmail() {
+    return this.form.controls['accOperatingPresentEmail'];
+  }
+
+  get accOperatingPresentContact() {
+    return this.form.controls['accOperatingPresentContact'];
+  }
+
+  get accOperatingPermanentDistrict() {
+    return this.form.controls['accOperatingPermanentDistrict'];
+  }
+  get accOperatingPermanentThana() {
+    return this.form.controls['accOperatingPermanentThana'];
+  }
+
+  get accOperatingPermanentAddress() {
+    return this.form.controls['accOperatingPermanentAddress'];
+  }
+  get accOperatingPermanentEmail() {
+    return this.form.controls['accOperatingPermanentEmail'];
+  }
+
+  get accOperatingPermanentContact() {
+    return this.form.controls['accOperatingPermanentContact'];
+  }
 
 
 

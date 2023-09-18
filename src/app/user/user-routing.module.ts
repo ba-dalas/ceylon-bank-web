@@ -4,10 +4,16 @@ import { UserEditShellComponent } from './user-edit-shell/user-edit-shell.compon
 
 const routes: Routes = [
   {
-    path: '',
-    component: UserEditShellComponent,
-
+    path:'',
+    redirectTo:'users/list',
+    pathMatch: 'full'
   },
+  {
+    path:'list',
+    component:UserEditShellComponent
+
+  }
+
 ];
 
 @NgModule({

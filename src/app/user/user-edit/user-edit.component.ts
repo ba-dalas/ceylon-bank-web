@@ -95,6 +95,9 @@ export class UserEditComponent implements OnInit, OnChanges {
 
 
   initForm() {
+
+    if(this.form) return;
+
     this.form = this.fb.group({
       fullName: ['', [Validators.required]],
       emailAddress: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],

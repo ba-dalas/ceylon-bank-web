@@ -6,17 +6,18 @@ const routes: Routes = [
   {
     path:'',
     // redirectTo:'bank-acc-info/local-acc',
-    redirectTo:'users',
+    redirectTo:'users/list',
     pathMatch:'full'
-  },
-  {
-    path:'bank-acc-info',
-    loadChildren: () => import('./bank-account/bank-account.module').then(m=>m.BankAccountModule)
   },
   {
     path:'users',
     loadChildren: () => import('./user/user.module').then(m=>m.UserModule)
   },
+  {
+    path:'bank-acc-info',
+    loadChildren: () => import('./bank-account/bank-account.module').then(m=>m.BankAccountModule)
+  },
+
   {
     path:'**',
     component:PageNotFoundComponent
