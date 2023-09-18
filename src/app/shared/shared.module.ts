@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { LayoutComponent } from './layout/layout.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -45,6 +46,7 @@ import { LayoutComponent } from './layout/layout.component';
     MatNativeDateModule,
     MatIconModule,
     MatMenuModule,
+    MatToolbarModule
 
 
   ],
@@ -64,7 +66,8 @@ import { LayoutComponent } from './layout/layout.component';
     HeaderComponent,
     FooterComponent,
     MatMenuModule,
-    LayoutComponent
+    LayoutComponent,
+    MatToolbarModule
 
   ]
 })
